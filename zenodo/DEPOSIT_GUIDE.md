@@ -18,22 +18,25 @@ Only one route is needed — but whichever you use, the metadata is already prep
 
 ## Route A — GitHub release + Zenodo integration (recommended)
 
-### A1. Create the GitHub repository
+### A1. Create the GitHub repository — **done**
 
-```bash
-cd hnscc-tls-signatures
-git init
-git add .
-git commit -m "Initial release: multi-signature TLS analysis pipeline and results"
+The repository is live and public:
 
-git branch -M main
-git remote add origin https://github.com/<YOUR_USERNAME>/hnscc-tls-signatures.git
-git push -u origin main
-```
+| | |
+|---|---|
+| URL | https://github.com/IveyTang/hnscc-tls-signatures |
+| Owner / name | `IveyTang/hnscc-tls-signatures` |
+| Visibility | Public |
+| Default branch | `main` |
+| Contents | 72 tracked files; HEAD `0ff9fc3` |
 
-Create the empty repository on GitHub first (no README, no licence — this repository already contains both).
+Nothing to do here. It was created with `auto_init: false` (no README, no licence — this repository already contains both) and the full history was pushed with `git push -u origin main`.
 
-> **Repository visibility.** Choose **Public** if the manuscript's data availability statement promises open code. If you prefer to keep it private, Zenodo's GitHub integration does not support private repositories and you must use Route B instead.
+> **If you ever need to rebuild it from scratch:** `git init && git add -A && git commit -m "..." && git branch -M main && git remote add origin https://github.com/IveyTang/hnscc-tls-signatures.git && git push -u origin main`.
+
+> **Repository visibility.** Public is required for the Zenodo GitHub integration, which does not support private repositories. If you would rather keep it private, skip to Route B.
+>
+> **Note on pushing from this machine.** The local sandbox sits behind an HTTP proxy that breaks git's HTTP/2 transport (`CONNECT tunnel failed, response 502`). The fix, already written into `.git/config`, is `http.version=HTTP/1.1` and a larger `http.postBuffer`. Keep both if you push again from here.
 
 ### A2. Enable the Zenodo integration
 
@@ -43,6 +46,16 @@ Create the empty repository on GitHub first (no README, no licence — this repo
    Zenodo reads `.zenodo.json` at this point. If any field is rejected, the metadata appears in the deposit draft with that field blank — check the deposit after the first release.
 
 ### A3. Cut a release
+
+**Do this only after A2 is switched on.** Zenodo only archives releases created *after* the integration is enabled — cutting `v1.0.0` first means you have to re-publish it afterwards for it to be picked up.
+
+Either use the script (recommended; it creates the tag at the current `main` and fills in the release notes):
+
+```bash
+python zenodo/create_release.py --github-release
+```
+
+or do it by hand:
 
 1. On GitHub, go to **Releases → Draft a new release**.
 2. Create the tag `v1.0.0` (matching the `version` field in the metadata).
@@ -97,7 +110,18 @@ Click **Publish**. The DOI becomes active immediately and cannot be deleted afte
 
 ## Route C — deposit via the REST API
 
-Useful for automating the deposit from a script or CI job.
+Useful for automating the deposit from a script or CI job. `zenodo/create_release.py` wraps the whole sequence, including the archive upload and the metadata envelope:
+
+```bash
+export ZENODO_TOKEN="<token with deposit:write and deposit:actions>"
+python zenodo/create_release.py --zenodo-deposit              # build, upload, publish
+python zenodo/create_release.py --zenodo-deposit --no-publish # leave as a draft to review first
+python zenodo/create_release.py --zenodo-deposit --dry-run    # show the plan, change nothing
+```
+
+It reads the token from the environment and stores nothing. Set `ZENODO_SANDBOX=1` to rehearse against sandbox.zenodo.org without burning a real DOI.
+
+The equivalent raw calls, if you prefer to run them by hand:
 
 ```bash
 # 1. Create a personal access token with deposit:write and deposit:actions scopes
@@ -145,11 +169,11 @@ Zenodo also generates a citation snippet and a DOI badge on the record page; the
 
 ## Checklist
 
-- [ ] `REPLACE_WITH_GITHUB_USERNAME` replaced in `CITATION.cff`
+- [x] ~~`REPLACE_WITH_GITHUB_USERNAME` replaced in `CITATION.cff`~~ — now points at `https://github.com/IveyTang/hnscc-tls-signatures`
+- [x] ~~Repository pushed and visible at the intended URL~~ — public, 72 files, default branch `main`
 - [ ] Author ORCIDs completed (Xi Tang: 0000-0003-2740-1368; Yulian Zhang and Yungang He pending)
-- [ ] Repository pushed and visible at the intended URL
-- [ ] Zenodo integration switched on (Route A) *or* archive uploaded (Route B)
-- [ ] Release tagged `v1.0.0` matching the `version` field
+- [ ] Zenodo integration switched on (Route A) *or* token supplied for Route B/C
+- [ ] Release tagged `v1.0.0` matching the `version` field — **only after** the integration is on
 - [ ] DOI obtained — record both the version DOI and the concept DOI
 - [ ] Concept DOI written into `README.md`, `CITATION.cff`, and the manuscript
-- [ ] DOI badge added to `README.md`
+- [ ] DOI badge added to `README.md` (template already present, commented out)

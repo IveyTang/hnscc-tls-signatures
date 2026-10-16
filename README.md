@@ -4,6 +4,17 @@
 
 This repository contains the complete, reproducible analysis pipeline, derived data, and result tables and figures for the manuscript above, submitted to *Journal of Translational Medicine*.
 
+| | |
+|---|---|
+| **Repository** | https://github.com/IveyTang/hnscc-tls-signatures |
+| **Archived release** | DOI to be assigned by Zenodo when `v1.0.0` is published — see [`zenodo/DEPOSIT_GUIDE.md`](zenodo/DEPOSIT_GUIDE.md) |
+| **Version** | 1.0.0 (see [`CHANGELOG.md`](CHANGELOG.md)) |
+| **Licence** | Code MIT · derived data CC BY 4.0 |
+
+<!-- Once the Zenodo deposit is live, uncomment and fill in the badge:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+-->
+
 ---
 
 ## What this study shows
@@ -132,6 +143,8 @@ multi-signature transcriptomic analysis. Journal of Translational Medicine. (in 
 ```
 
 The archived release DOI will be added here once the Zenodo deposit is published. See `CITATION.cff` for machine-readable metadata.
+
+The repository is already published and citable at https://github.com/IveyTang/hnscc-tls-signatures. `zenodo/create_release.py` creates the `v1.0.0` GitHub release that Zenodo archives — run it **after** switching on the Zenodo–GitHub integration, so that the release is picked up.
 
 ---
 
