@@ -4,16 +4,14 @@
 
 This repository contains the complete, reproducible analysis pipeline, derived data, and result tables and figures for the manuscript above, submitted to *Journal of Translational Medicine*.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23415040.svg)](https://doi.org/10.5281/zenodo.23415040)
+
 | | |
 |---|---|
 | **Repository** | https://github.com/IveyTang/hnscc-tls-signatures |
-| **Archived release** | DOI to be assigned by Zenodo when `v1.0.0` is published — see [`zenodo/DEPOSIT_GUIDE.md`](zenodo/DEPOSIT_GUIDE.md) |
+| **Archived release** | [10.5281/zenodo.23415040](https://doi.org/10.5281/zenodo.23415040) — concept DOI, always resolves to the latest version<br>v1.0.0: [10.5281/zenodo.23415041](https://doi.org/10.5281/zenodo.23415041) |
 | **Version** | 1.0.0 (see [`CHANGELOG.md`](CHANGELOG.md)) |
 | **Licence** | Code MIT · derived data CC BY 4.0 |
-
-<!-- Once the Zenodo deposit is live, uncomment and fill in the badge:
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
--->
 
 ---
 
@@ -142,9 +140,16 @@ interchangeable in head and neck squamous cell carcinoma: a retrospective
 multi-signature transcriptomic analysis. Journal of Translational Medicine. (in submission)
 ```
 
-The archived release DOI will be added here once the Zenodo deposit is published. See `CITATION.cff` for machine-readable metadata.
+The repository is citable at https://github.com/IveyTang/hnscc-tls-signatures, and release 1.0.0 is archived at https://doi.org/10.5281/zenodo.23415040 (concept DOI). See `CITATION.cff` for machine-readable metadata.
 
-The repository is already published and citable at https://github.com/IveyTang/hnscc-tls-signatures. `zenodo/create_release.py` creates the `v1.0.0` GitHub release that Zenodo archives — run it **after** switching on the Zenodo–GitHub integration, so that the release is picked up.
+```
+Tang X, Zhang Y, He Y. hnscc-tls-signatures: analysis code and derived data for
+"Tertiary lymphoid structure gene signatures are not interchangeable in head and
+neck squamous cell carcinoma" (v1.0.0). Zenodo. 2026.
+https://doi.org/10.5281/zenodo.23415040
+```
+
+To archive a revision, bump `version` in `.zenodo.json` and `CITATION.cff`, commit, then run `python zenodo/create_release.py --github-release` with a new tag — Zenodo files it under the same concept DOI.
 
 ---
 

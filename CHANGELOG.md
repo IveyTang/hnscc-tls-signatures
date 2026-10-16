@@ -6,6 +6,8 @@ All notable changes to this repository are documented here. This project adheres
 
 Initial release accompanying the manuscript *"Tertiary lymphoid structure gene signatures are not interchangeable in head and neck squamous cell carcinoma: a retrospective multi-signature transcriptomic analysis"* (submitted to *Journal of Translational Medicine*).
 
+**Archived release.** Concept DOI [`10.5281/zenodo.23415040`](https://doi.org/10.5281/zenodo.23415040) · version DOI for 1.0.0 [`10.5281/zenodo.23415041`](https://doi.org/10.5281/zenodo.23415041) · record <https://zenodo.org/records/23415041>. Archived file: `IveyTang/hnscc-tls-signatures-v1.0.0.zip` (3,251,526 bytes, md5 `4bf07ad6f2d04be5b2d43e9d5429c976`).
+
 ### Pipeline
 
 - **Cohort construction** — GDC retrieval, three-way primary-tumour filter (primary-disease flag + squamous morphology code + head-and-neck site), and stage fallback, yielding 438 of 528 TCGA-HNSC patients. Handles two schema pitfalls that silently corrupt the cohort: multiple primary diagnoses and the deprecated `demographic.gender` field.

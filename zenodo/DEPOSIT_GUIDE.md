@@ -66,8 +66,8 @@ Within a minute or two, Zenodo archives the release as a new record and mints a 
 
 | DOI type | What it identifies | Use it for |
 |---|---|---|
-| **Version DOI** (e.g. `10.5281/zenodo.XXXXXXX`) | This exact release | Citing a specific analysis version |
-| **Concept DOI** (e.g. `10.5281/zenodo.YYYYYYY`) | All versions of the software | The manuscript's data availability statement |
+| **Version DOI** (this release: `10.5281/zenodo.23415041`) | This exact release | Citing a specific analysis version |
+| **Concept DOI** (this software: `10.5281/zenodo.23415040`) | All versions of the software | The manuscript's data availability statement |
 
 Use the **concept DOI** in the manuscript. It always resolves to the latest version.
 
@@ -154,26 +154,36 @@ curl -s -X POST -H "Authorization: Bearer $ZENODO_TOKEN" \
 
 ---
 
-## After the DOI is minted
+## After the DOI is minted — done
 
-Three places need the DOI once it exists:
+The deposit is live:
 
-1. **`README.md`** — replace the sentence *"The archived release DOI will be added here once the Zenodo deposit is published."* with the concept DOI.
-2. **`CITATION.cff`** — add a `doi:` field at the top level.
-3. **The manuscript** — in *Availability of data and materials*, replace
-   `〔待补：Zenodo/Figshare DOI〕` and `〔待补：GitHub 仓库链接〕` with the concept DOI and the repository URL.
+| | |
+|---|---|
+| Concept DOI (all versions) | [`10.5281/zenodo.23415040`](https://doi.org/10.5281/zenodo.23415040) |
+| Version DOI (v1.0.0) | [`10.5281/zenodo.23415041`](https://doi.org/10.5281/zenodo.23415041) |
+| Record | https://zenodo.org/records/23415041 |
+| Archived file | `IveyTang/hnscc-tls-signatures-v1.0.0.zip` (3,251,526 bytes) |
 
-Zenodo also generates a citation snippet and a DOI badge on the record page; the badge Markdown can be pasted at the top of `README.md`.
+All three back-references were written in the same commit:
+
+1. **`README.md`** — DOI badge at the top plus both DOIs in the header table. ✅
+2. **`CITATION.cff`** — top-level `doi:` field set to the **version** DOI, because this file describes release 1.0.0 specifically. ✅
+3. **The manuscript** — *Availability of data and materials* now cites the repository URL and the **concept** DOI. ✅
+
+> **Which DOI where.** Use the **concept** DOI wherever the citation should keep working after a revision (the manuscript, a paper's reference list, the README table). Use the **version** DOI when you need to pin one exact analysis (reproducibility statements, `CITATION.cff`, a methods section describing "release 1.0.0").
+
+Later versions are filed under the same concept DOI automatically: bump `version` in `.zenodo.json` and `CITATION.cff`, commit, then cut a new release (`v1.0.1`, …).
 
 ---
 
 ## Checklist
 
 - [x] ~~`REPLACE_WITH_GITHUB_USERNAME` replaced in `CITATION.cff`~~ — now points at `https://github.com/IveyTang/hnscc-tls-signatures`
-- [x] ~~Repository pushed and visible at the intended URL~~ — public, 72 files, default branch `main`
-- [ ] Author ORCIDs completed (Xi Tang: 0000-0003-2740-1368; Yulian Zhang and Yungang He pending)
-- [ ] Zenodo integration switched on (Route A) *or* token supplied for Route B/C
-- [ ] Release tagged `v1.0.0` matching the `version` field — **only after** the integration is on
-- [ ] DOI obtained — record both the version DOI and the concept DOI
-- [ ] Concept DOI written into `README.md`, `CITATION.cff`, and the manuscript
-- [ ] DOI badge added to `README.md` (template already present, commented out)
+- [x] ~~Repository pushed and visible at the intended URL~~ — public, 73 files, default branch `main`
+- [x] ~~Zenodo integration switched on~~ — switched on 2026-10-16
+- [x] ~~Release tagged `v1.0.0` matching the `version` field~~ — tag `v1.0.0` at `6470fb0`
+- [x] ~~DOI obtained~~ — concept `10.5281/zenodo.23415040`, version `10.5281/zenodo.23415041`
+- [x] ~~Concept DOI written into `README.md`, `CITATION.cff`, and the manuscript~~
+- [x] ~~DOI badge added to `README.md`~~
+- [ ] Author ORCIDs completed (Xi Tang: 0000-0003-2740-1368; Yulian Zhang and Yungang He pending — optional, Zenodo accepts their absence)
