@@ -1,0 +1,9 @@
+﻿set_a,set_b,spearman_rho
+G1_Coppola_12chemokine,G2_11chemokine_HCC,0.9903
+G1_Coppola_12chemokine,G3_HNSCC_13chemokine,0.9779
+G2_11chemokine_HCC,G3_HNSCC_13chemokine,0.9737
+G1_Coppola_12chemokine,G7_Tcell_inflamed_cytolytic,0.7767
+G2_11chemokine_HCC,G7_Tcell_inflamed_cytolytic,0.8005
+G3_HNSCC_13chemokine,G7_Tcell_inflamed_cytolytic,0.795
+G4_TLS_maturation_GC,G7_Tcell_inflamed_cytolytic,0.5749
+G6_HEV_lymphoid_stroma,G7_Tcell_inflamed_cytolytic,0.4328

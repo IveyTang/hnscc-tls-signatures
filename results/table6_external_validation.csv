@@ -1,0 +1,17 @@
+﻿Item,Value
+Cohort,GSE65858 (E-GEOD-65858)
+Platform,Illumina HumanHT-12 v4
+Patients analysed,270
+Deaths,94
+Genes scored,22000
+HPV16 RNA annotation available,250
+"Chemokine signature pairs, rho (min-max)",0.974-0.990
+"CTS vs generic T cell-inflamed, rho",0.777-0.800
+"CTS vs checkpoint programme, rho",0.827
+"CTS vs GC B cell programme, rho",0.146
+"CTS vs plasma cell programme, rho",0.077
+"CTS, univariable HR per SD",1.002 (p = 0.985)
+"CTS, adjusted HR per SD (stage + age)",1.016 (p = 0.881)
+Positive control: optimal cut-off p,0.0100
+"Median CTS, HPV16 DNA+RNA+ vs DNA-",0.670 vs 0.445 (p = 0.001235)
+Highest-CTS expression cluster,Atypical IR 1 (median 0.742; Kruskal-Wallis p = 2.96e-15)

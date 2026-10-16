@@ -1,0 +1,6 @@
+﻿analysis,n_high,n_low,chi2,p,median_os_high_days,median_os_low_days,hr
+discovery cut-off 0.2489,218.0,52.0,0.035,0.85093,1939.0,1270.0,
+cohort-optimal cut-off 0.1502,243.0,27.0,2.161,0.14152,1872.0,1270.0,
+median cut-off 0.4952,135.0,135.0,0.057,0.81049,1872.0,1724.0,
+continuous CTS (univariable Cox),,,,0.98478,,,1.002035745289527
+continuous CTS (adjusted stage + age),,,,0.88115,,,1.0162237839912605

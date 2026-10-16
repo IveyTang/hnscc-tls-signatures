@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "file": "E-GEOD-65858.idf.txt",
+      "ok": true,
+      "note": "cached",
+      "bytes": 10018
+    },
+    {
+      "file": "E-GEOD-65858.sdrf.txt",
+      "ok": true,
+      "note": "cached",
+      "bytes": 301544
+    },
+    {
+      "file": "A-GEOD-10558.adf.txt",
+      "ok": true,
+      "note": "cached",
+      "bytes": 7783741
+    }
+  ],
+  "samples": 270,
+  "downloaded": 270,
+  "failed": 0,
+  "retrieved_at": "2026-10-16T23:34:15"
+}

@@ -1,0 +1,264 @@
+{
+  "cohort": "GSE65858 (E-GEOD-65858, EBI ArrayExpress mirror)",
+  "n_samples": 270,
+  "n_deaths": 94,
+  "geneset_coverage": {
+    "G1_Coppola_12chemokine": "11/12",
+    "G2_11chemokine_HCC": "10/11",
+    "G3_HNSCC_13chemokine": "12/13",
+    "G4_TLS_maturation_GC": "14/14",
+    "G5_Th1_IFNgamma": "12/12",
+    "G6_HEV_lymphoid_stroma": "9/9",
+    "G7_Tcell_inflamed_cytolytic": "10/10"
+  },
+  "n_genes_scored": 22000,
+  "discovery_cutoff": 0.2489,
+  "os_unit": "days (as submitted to ArrayExpress)",
+  "convergence": {
+    "chemokine_pairs_min_rho": 0.9737,
+    "chemokine_pairs_max_rho": 0.9903,
+    "chemokine_vs_Tcell_rho": [
+      {
+        "set": "G1_Coppola_12chemokine",
+        "rho": 0.7767
+      },
+      {
+        "set": "G2_11chemokine_HCC",
+        "rho": 0.8005
+      },
+      {
+        "set": "G3_HNSCC_13chemokine",
+        "rho": 0.795
+      },
+      {
+        "set": "G4_TLS_maturation_GC",
+        "rho": 0.5749
+      },
+      {
+        "set": "G6_HEV_lymphoid_stroma",
+        "rho": 0.4328
+      }
+    ]
+  },
+  "programme_correlation": [
+    {
+      "programme": "Tfh",
+      "spearman_rho_with_CTS": 0.836
+    },
+    {
+      "programme": "Checkpoint",
+      "spearman_rho_with_CTS": 0.8274
+    },
+    {
+      "programme": "CD8 T cells",
+      "spearman_rho_with_CTS": 0.7502
+    },
+    {
+      "programme": "Macrophages",
+      "spearman_rho_with_CTS": 0.7118
+    },
+    {
+      "programme": "B cells",
+      "spearman_rho_with_CTS": 0.6795
+    },
+    {
+      "programme": "Treg",
+      "spearman_rho_with_CTS": 0.6541
+    },
+    {
+      "programme": "IFN-gamma",
+      "spearman_rho_with_CTS": 0.611
+    },
+    {
+      "programme": "Endothelium/HEV",
+      "spearman_rho_with_CTS": 0.5523
+    },
+    {
+      "programme": "CAF",
+      "spearman_rho_with_CTS": 0.1968
+    },
+    {
+      "programme": "GC B cells",
+      "spearman_rho_with_CTS": 0.1461
+    },
+    {
+      "programme": "Plasma cells",
+      "spearman_rho_with_CTS": 0.0766
+    },
+    {
+      "programme": "Epithelial",
+      "spearman_rho_with_CTS": -0.2005
+    }
+  ],
+  "ext_optimal_cutoff": 0.15022222222222223,
+  "per_signature_survival": [
+    {
+      "score": "G1_Coppola_12chemokine",
+      "hr_per_sd": 1.0608,
+      "p_cox": 0.5732,
+      "optimal_cut": -0.1282,
+      "chi2_at_cut": 1.023,
+      "p_at_cut": 0.31175
+    },
+    {
+      "score": "G2_11chemokine_HCC",
+      "hr_per_sd": 1.0218,
+      "p_cox": 0.83691,
+      "optimal_cut": -0.5968,
+      "chi2_at_cut": 1.355,
+      "p_at_cut": 0.24449
+    },
+    {
+      "score": "G3_HNSCC_13chemokine",
+      "hr_per_sd": 1.0537,
+      "p_cox": 0.62303,
+      "optimal_cut": -0.5487,
+      "chi2_at_cut": 2.259,
+      "p_at_cut": 0.13286
+    },
+    {
+      "score": "G4_TLS_maturation_GC",
+      "hr_per_sd": 1.0148,
+      "p_cox": 0.89662,
+      "optimal_cut": -0.5087,
+      "chi2_at_cut": 6.937,
+      "p_at_cut": 0.00844
+    },
+    {
+      "score": "G5_Th1_IFNgamma",
+      "hr_per_sd": 0.9647,
+      "p_cox": 0.73163,
+      "optimal_cut": 0.2892,
+      "chi2_at_cut": 2.764,
+      "p_at_cut": 0.09643
+    },
+    {
+      "score": "G6_HEV_lymphoid_stroma",
+      "hr_per_sd": 1.1018,
+      "p_cox": 0.36892,
+      "optimal_cut": 0.361,
+      "chi2_at_cut": 3.998,
+      "p_at_cut": 0.04556
+    },
+    {
+      "score": "G7_Tcell_inflamed_cytolytic",
+      "hr_per_sd": 0.9133,
+      "p_cox": 0.40416,
+      "optimal_cut": -0.2683,
+      "chi2_at_cut": 6.633,
+      "p_at_cut": 0.01001
+    }
+  ],
+  "survival": [
+    {
+      "analysis": "discovery cut-off 0.2489",
+      "n_high": 218,
+      "n_low": 52,
+      "chi2": 0.035,
+      "p": 0.85093,
+      "median_os_high_days": 1939.0,
+      "median_os_low_days": 1270.0
+    },
+    {
+      "analysis": "cohort-optimal cut-off 0.1502",
+      "n_high": 243,
+      "n_low": 27,
+      "chi2": 2.161,
+      "p": 0.14152,
+      "median_os_high_days": 1872.0,
+      "median_os_low_days": 1270.0
+    },
+    {
+      "analysis": "median cut-off 0.4952",
+      "n_high": 135,
+      "n_low": 135,
+      "chi2": 0.057,
+      "p": 0.81049,
+      "median_os_high_days": 1872.0,
+      "median_os_low_days": 1724.0
+    },
+    {
+      "analysis": "continuous CTS (univariable Cox)",
+      "hr": 1.002035745289527,
+      "p": 0.98478
+    },
+    {
+      "analysis": "continuous CTS (adjusted stage + age)",
+      "hr": 1.0162237839912605,
+      "p": 0.88115
+    }
+  ],
+  "hpv": {
+    "n_annotated": 250,
+    "groups": {
+      "DNA-": {
+        "n": 196,
+        "median_cts": 0.4448
+      },
+      "DNA+RNA-": {
+        "n": 19,
+        "median_cts": 0.497
+      },
+      "DNA+RNA+": {
+        "n": 35,
+        "median_cts": 0.6704
+      }
+    },
+    "mannwhitney_DNAposRNApos_vs_DNAneg": {
+      "U": 4607.0,
+      "p": 0.001235474153189521
+    },
+    "dna_binary": {
+      "n_pos": 73,
+      "n_neg": 196,
+      "median_pos": 0.6,
+      "median_neg": 0.4448,
+      "p": 0.040046241262915706
+    },
+    "stratified": [
+      {
+        "stratum": "DNA-",
+        "n": 196,
+        "n_cts_high": 154,
+        "n_cts_low": 42,
+        "chi2": 0.271,
+        "p": 0.60297
+      },
+      {
+        "stratum": "DNA+RNA+",
+        "n": 35,
+        "n_cts_high": 34,
+        "n_cts_low": 1,
+        "note": "too few CTS-low for a stratified comparison"
+      }
+    ]
+  },
+  "cluster_cts": [
+    {
+      "cluster": "Atypical IR 1",
+      "count": 73,
+      "median": 0.7415
+    },
+    {
+      "cluster": "Basal 4",
+      "count": 84,
+      "median": 0.3811
+    },
+    {
+      "cluster": "Classical 2",
+      "count": 30,
+      "median": 0.2811
+    },
+    {
+      "cluster": "Mesenchymal 3",
+      "count": 83,
+      "median": 0.5415
+    }
+  ],
+  "cluster_kruskal": {
+    "H": 70.74253892553351,
+    "p": 2.9596963219954483e-15,
+    "highest_median_cluster": "Atypical IR 1"
+  },
+  "figures_written": true
+}

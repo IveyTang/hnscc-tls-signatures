@@ -2,6 +2,49 @@
 
 All notable changes to this repository are documented here. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0]
+
+Adds the external validation cohort and removes the last blocked analysis step.
+
+### Added
+
+- **External validation in GSE65858** (270 HNSCC patients, 94 deaths, Illumina HumanHT-12 v4),
+  retrieved from the **EMBL-EBI ArrayExpress mirror** as `E-GEOD-65858` because NCBI was
+  unreachable from the analysis environment.
+  - `scripts/20_fetch_gse65858_ebi.py` — parallel retrieval of 270 per-sample tables, the
+    SDRF and the IDF, with exact byte-length verification.
+  - `scripts/20b_fetch_adf_ranged.py` — 71.7 MB array design via parallel HTTP Range
+    requests, verifying the full 47,323-probe coverage.
+  - `scripts/21_external_validation_gse65858.py` — identical gene sets and scoring, no
+    re-tuning: convergence, microenvironmental programme correlation, survival,
+    HPV association, and a check against the expression clusters published with the cohort.
+  - `scripts/22_ext_figure_panel.py` — four-panel validation figure and summary table.
+- Derived validation data: `data/derived/gse65858_clinical_and_cts.csv`,
+  `data/gse65858_sdrf.txt`, `results/21_ext_*`, `results/table6_external_validation.csv`,
+  `results/fig_ext_*.png`.
+
+### Findings
+
+- **Replicated:** chemokine signature redundancy (ρ = 0.974–0.990); the score's coupling to
+  checkpoint expression (ρ = 0.827) rather than to germinal-centre B cells (ρ = 0.146) or
+  plasma cells (ρ = 0.077); and the HPV association (median 0.670 in HPV16 DNA+RNA+ vs 0.445
+  in DNA−, p = 0.0012, against 0.672 vs 0.472 in the discovery cohort).
+- **Did not replicate:** the prognostic association (HR 1.002 per SD, p = 0.985; all cut-offs
+  null), although the individual gene sets and the positive control retained cut-off-dependent
+  associations in the same cohort (p = 0.008, 0.046 and 0.010).
+- The immune-response expression cluster published with GSE65858 carried the highest
+  consensus score (median 0.742; Kruskal–Wallis p = 3 × 10⁻¹⁵).
+
+### Notes
+
+- `GSE159067` (immunotherapy-treated cohort in the original analysis plan) has **no**
+  ArrayExpress mirror, having been submitted after ArrayExpress stopped importing GEO. It is
+  not part of this validation and no immunotherapy-response claim rests on it.
+- A truncated HTTP transfer still returns status 200: an initial attempt at the array design
+  silently covered only 5,193 of 47,323 probes. All retrieval steps now verify exact sizes.
+
+---
+
 ## [1.0.0] — 2026-10-16
 
 Initial release accompanying the manuscript *"Tertiary lymphoid structure gene signatures are not interchangeable in head and neck squamous cell carcinoma: a retrospective multi-signature transcriptomic analysis"* (submitted to *Journal of Translational Medicine*).
