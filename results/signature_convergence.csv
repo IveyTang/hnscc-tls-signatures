@@ -1,0 +1,11 @@
+set_a,set_b,spearman_rho
+G1_Coppola_12chemokine,G2_11chemokine_HCC,0.995
+G1_Coppola_12chemokine,G3_HNSCC_13chemokine,0.9872
+G1_Coppola_12chemokine,G4_TLS_maturation_GC,0.6414
+G1_Coppola_12chemokine,G6_HEV_lymphoid_stroma,0.6785
+G2_11chemokine_HCC,G3_HNSCC_13chemokine,0.9877
+G2_11chemokine_HCC,G4_TLS_maturation_GC,0.6511
+G2_11chemokine_HCC,G6_HEV_lymphoid_stroma,0.6865
+G3_HNSCC_13chemokine,G4_TLS_maturation_GC,0.6964
+G3_HNSCC_13chemokine,G6_HEV_lymphoid_stroma,0.7074
+G4_TLS_maturation_GC,G6_HEV_lymphoid_stroma,0.5933

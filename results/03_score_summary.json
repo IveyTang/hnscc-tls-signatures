@@ -1,0 +1,57 @@
+{
+ "n_samples_expr": 517,
+ "n_primary_tumor": 517,
+ "n_with_clinical": 438,
+ "n_death": 218,
+ "gene_coverage": {
+  "G1_Coppola_12chemokine": {
+   "n_genes": 12,
+   "n_present": 12
+  },
+  "G2_11chemokine_HCC": {
+   "n_genes": 11,
+   "n_present": 11
+  },
+  "G3_HNSCC_13chemokine": {
+   "n_genes": 13,
+   "n_present": 13
+  },
+  "G4_TLS_maturation_GC": {
+   "n_genes": 14,
+   "n_present": 14
+  },
+  "G5_Th1_IFNgamma": {
+   "n_genes": 12,
+   "n_present": 12
+  },
+  "G6_HEV_lymphoid_stroma": {
+   "n_genes": 9,
+   "n_present": 9
+  },
+  "G7_Tcell_inflamed_cytolytic": {
+   "n_genes": 10,
+   "n_present": 10
+  }
+ },
+ "consensus_sets": [
+  "G1_Coppola_12chemokine",
+  "G2_11chemokine_HCC",
+  "G3_HNSCC_13chemokine",
+  "G4_TLS_maturation_GC",
+  "G6_HEV_lymphoid_stroma"
+ ],
+ "ssgsea_available": true,
+ "cutpoint_optimal": 0.248926,
+ "logrank_chi2_at_cut": 5.721466392604056,
+ "logrank_chi2_exact": 5.7175570719389155,
+ "logrank_p_exact": 0.01679608394902376,
+ "cutpoint_median": 0.5001934235976789,
+ "group_counts_opt": {
+  "High": 345,
+  "Low": 93
+ },
+ "bootstrap_cut_median": 0.4366945,
+ "signature_convergence_median_rho": 0.69145,
+ "signature_convergence_min_rho": 0.5933,
+ "signature_convergence_max_rho": 0.995
+}

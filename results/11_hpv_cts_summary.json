@@ -1,0 +1,162 @@
+{
+ "A_distribution": {
+  "n_hpv_pred_pos": 68,
+  "n_hpv_pred_neg": 370,
+  "cts_median_pos": 0.6725,
+  "cts_median_neg": 0.4716,
+  "mwu_p": 2.9185872280076297e-05,
+  "cts_high_fraction_pos": 0.9265,
+  "cts_high_fraction_neg": 0.7622
+ },
+ "B_stratified_km": [
+  {
+   "stratum": "HPV-positive (predicted)",
+   "n": 68,
+   "n_high": 63,
+   "n_low": 5,
+   "n_events": 19,
+   "median_os_high": 68.4,
+   "median_os_low": 47.0,
+   "logrank_p": 0.623315633218884
+  },
+  {
+   "stratum": "HPV-negative (predicted)",
+   "n": 370,
+   "n_high": 282,
+   "n_low": 88,
+   "n_events": 199,
+   "median_os_high": 35.9,
+   "median_os_low": 21.8,
+   "logrank_p": 0.07394022559431873
+  },
+  {
+   "stratum": "Oropharynx",
+   "n": 56,
+   "n_high": 51,
+   "n_low": 5,
+   "n_events": 21,
+   "median_os_high": 57.4,
+   "median_os_low": 47.0,
+   "logrank_p": 0.07369849432458209
+  },
+  {
+   "stratum": "Non-oropharynx",
+   "n": 382,
+   "n_high": 294,
+   "n_low": 88,
+   "n_events": 197,
+   "median_os_high": 42.3,
+   "median_os_low": 26.4,
+   "logrank_p": 0.04560425616253387
+  }
+ ],
+ "CD_cox": [
+  {
+   "model": "CTS (continuous), HPV-positive (predicted)",
+   "n": 68,
+   "events": 19,
+   "HR": 0.553,
+   "CI_low": 0.095,
+   "CI_high": 3.206,
+   "p": 0.5091079892126779
+  },
+  {
+   "model": "CTS (continuous), HPV-negative (predicted)",
+   "n": 370,
+   "events": 199,
+   "HR": 0.792,
+   "CI_low": 0.467,
+   "CI_high": 1.343,
+   "p": 0.38655078515794405
+  },
+  {
+   "model": "CTS (continuous), Oropharynx",
+   "n": 56,
+   "events": 21,
+   "HR": 0.164,
+   "CI_low": 0.029,
+   "CI_high": 0.912,
+   "p": 0.03891526237123322
+  },
+  {
+   "model": "CTS (continuous), Non-oropharynx",
+   "n": 382,
+   "events": 197,
+   "HR": 0.762,
+   "CI_low": 0.447,
+   "CI_high": 1.3,
+   "p": 0.3186198313512997
+  },
+  {
+   "model": "Multivariable CTS (without HPV)",
+   "n": 438,
+   "events": 218,
+   "HR": 0.66,
+   "CI_low": 0.399,
+   "CI_high": 1.093,
+   "p": 0.10651865991961586
+  },
+  {
+   "model": "Multivariable CTS (with HPV)",
+   "n": 438,
+   "events": 218,
+   "HR": 0.739,
+   "CI_low": 0.444,
+   "CI_high": 1.23,
+   "p": 0.24439320021480201
+  },
+  {
+   "model": "Multivariable HPV-positive (predicted)",
+   "n": 438,
+   "events": 218,
+   "HR": 0.49,
+   "CI_low": 0.307,
+   "CI_high": 0.781,
+   "p": 0.0027250372720517137
+  }
+ ],
+ "E_interaction": [
+  {
+   "analysis": "Full cohort (predicted HPV)",
+   "n": 438,
+   "LR_chi2": 0.022,
+   "df": 1,
+   "p_interaction": 0.8808057980970947,
+   "HR_interaction": 0.886,
+   "CI_low": 0.181,
+   "CI_high": 4.334
+  },
+  {
+   "analysis": "Directly labelled subset (n=84)",
+   "n": 84,
+   "LR_chi2": 2.093,
+   "df": 1,
+   "p_interaction": 0.1479825467565834,
+   "HR_interaction": 0.11,
+   "CI_low": 0.005,
+   "CI_high": 2.245
+  }
+ ],
+ "F_labelled_subset": [
+  {
+   "stratum": "HPV-positive (histology/ISH)",
+   "n": 23,
+   "events": 6,
+   "cts_median": 0.663,
+   "HR": 0.062,
+   "CI_low": 0.003,
+   "CI_high": 1.148,
+   "p": 0.06181415557576952
+  },
+  {
+   "stratum": "HPV-negative (histology/ISH)",
+   "n": 61,
+   "events": 27,
+   "cts_median": 0.506,
+   "HR": 0.682,
+   "CI_low": 0.188,
+   "CI_high": 2.481,
+   "p": 0.5614172054395623
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite both the manuscript and the archived software release."
+title: "hnscc-tls-signatures: analysis code and derived data for Tertiary lymphoid structure gene signatures are not interchangeable in head and neck squamous cell carcinoma"
+abstract: >-
+  Reproducible analysis pipeline, derived patient-level data, and complete result
+  tables and figures for a multi-signature transcriptomic analysis of tertiary
+  lymphoid structure (TLS) gene signatures in 438 patients with head and neck
+  squamous cell carcinoma from TCGA-HNSC. The study shows that chemokine-based
+  TLS signatures are nearly redundant with one another and correlate almost as
+  strongly with a generic T cell-inflamed signature as with each other, that the
+  consensus score tracks immune checkpoint and regulatory T cell programmes more
+  strongly than TLS structural features, and that its prognostic value is
+  cut-off dependent and not independent of stage and age.
+type: software
+version: "1.0.0"
+date-released: "2026-10-16"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+repository-code: "https://github.com/REPLACE_WITH_GITHUB_USERNAME/hnscc-tls-signatures"
+url: "https://github.com/REPLACE_WITH_GITHUB_USERNAME/hnscc-tls-signatures"
+keywords:
+  - tertiary lymphoid structures
+  - head and neck squamous cell carcinoma
+  - gene signature
+  - transcriptomics
+  - tumour immune microenvironment
+  - biomarker
+  - TCGA-HNSC
+  - human papillomavirus
+authors:
+  - family-names: Tang
+    given-names: Xi
+    orcid: "https://orcid.org/0000-0003-2740-1368"
+    affiliation: "Department of Head and Neck Surgery, Chongqing University Cancer Hospital, Chongqing, China"
+  - family-names: Zhang
+    given-names: Yulian
+    affiliation: "Department of Head and Neck Surgery, Chongqing University Cancer Hospital, Chongqing, China"
+  - family-names: He
+    given-names: Yungang
+    affiliation: "Department of Head and Neck Surgery, Chongqing University Cancer Hospital, Chongqing, China"
+references:
+  - type: article
+    title: "Tertiary lymphoid structure gene signatures are not interchangeable in head and neck squamous cell carcinoma: a retrospective multi-signature transcriptomic analysis"
+    authors:
+      - family-names: Tang
+        given-names: Xi
+      - family-names: Zhang
+        given-names: Yulian
+      - family-names: He
+        given-names: Yungang
+    journal: "Journal of Translational Medicine"
+    status: submitted

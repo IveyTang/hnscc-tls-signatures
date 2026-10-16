@@ -1,0 +1,55 @@
+{
+ "n": 438,
+ "n_events": 218,
+ "logrank": {
+  "logrank_optimal": {
+   "p": 0.01679608394902376,
+   "chi2": 5.7175570719389155,
+   "n_high": 345,
+   "n_low": 93
+  },
+  "logrank_median": {
+   "p": 0.3645106716131675,
+   "chi2": 0.8222927491304765,
+   "n_high": 219,
+   "n_low": 219
+  }
+ },
+ "multivariable_CTS": [
+  {
+   "var": "CTS",
+   "HR": 0.7573741130770384,
+   "lower": 0.46325386209678854,
+   "upper": 1.2382315488162816,
+   "p": 0.26786449141517954
+  }
+ ],
+ "cindex_CTS": 0.5360536317567568,
+ "cindex_G3": 0.5270446227477478,
+ "cindex_G7_Tcell_inflamed": 0.5458368524774775,
+ "td_auc": {
+  "12": {
+   "CTS": 0.5332,
+   "G1_Coppola_12chemokine": 0.5072,
+   "G3_HNSCC_13chemokine": 0.5185,
+   "G7_Tcell_inflamed_cytolytic": 0.5324
+  },
+  "36": {
+   "CTS": 0.5728,
+   "G1_Coppola_12chemokine": 0.5619,
+   "G3_HNSCC_13chemokine": 0.564,
+   "G7_Tcell_inflamed_cytolytic": 0.5862
+  },
+  "60": {
+   "CTS": 0.5582,
+   "G1_Coppola_12chemokine": 0.5522,
+   "G3_HNSCC_13chemokine": 0.551,
+   "G7_Tcell_inflamed_cytolytic": 0.5741
+  }
+ },
+ "tls_signature_convergence_median_rho": 0.6914450379266321,
+ "tls_signature_convergence_range": [
+  0.5932980014550997,
+  0.9949539217249493
+ ]
+}

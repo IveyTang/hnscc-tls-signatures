@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "purpose": "选题四：HNSCC 三级淋巴结构（TLS）共识基因评分 —— 候选基因集汇总",
+    "version": "1.0",
+    "date": "2026-10-16",
+    "note": "所有基因符号使用 HGNC 官方符号；计算前需做符号标准化（mygene / HGNChelper）"
+  },
+
+  "G1_Coppola_12chemokine": {
+    "label": "Coppola 12-趋化因子签名（TLS 经典签名，泛瘤种）",
+    "source": "Coppola et al. 2011；库内多篇综述引为 TLS 检测的转录组方法之一",
+    "genes": ["CCL2", "CCL3", "CCL4", "CCL5", "CCL8", "CCL18", "CCL19", "CCL21",
+              "CXCL9", "CXCL10", "CXCL11", "CXCL13"]
+  },
+
+  "G2_11chemokine_HCC": {
+    "label": "11-基因趋化因子签名（HCC 早期复发，已用 IHC 验证 TLS+/-）",
+    "source": "库内 HNSCC TLS 论文所引用（原文 ref 9）：用于划分 TLS+/TLS- 并预测早期复发",
+    "genes": ["CCL2", "CCL4", "CCL5", "CCL8", "CCL18", "CCL19", "CCL21",
+              "CXCL9", "CXCL10", "CXCL11", "CXCL13"]
+  },
+
+  "G3_HNSCC_13chemokine": {
+    "label": "HNSCC 专用 13-基因 TLS 签名（本研究主要对照基线）",
+    "source": "库内文献《Intratumoral tertiary lymphoid structures promote patient survival》(HNSCC, TCGA)：由 12 趋化因子签名与 9 个标志基因推导，剔除 BCL6",
+    "genes": ["LAMP3", "CCL2", "CCL3", "CCL4", "CCL5", "CCL18", "CCL19", "CCL21",
+              "CXCL9", "CXCL10", "CXCL11", "CXCL13", "CXCR4"]
+  },
+
+  "G4_TLS_maturation_GC": {
+    "label": "TLS 成熟度 / 生发中心（GC）标志基因",
+    "source": "库内 Rufin et al. Nat Commun（HPV+ HNSCC GC-TIL-B）、Cabrita et al. Nature、Patil et al. 等",
+    "genes": ["CXCL13", "LTA", "LTB", "TNFRSF14", "CR2", "MS4A1", "CD79A", "CD79B",
+              "AICDA", "BCL6", "MEF2B", "RGS13", "CD19", "TNFRSF13C"]
+  },
+
+  "G5_Th1_IFNgamma": {
+    "label": "Th1 / IFN-γ 效应程序（与 TLS 共变，用于分层归因）",
+    "source": "库内 van Baarsen 综述、Sautès-Fridman 系列",
+    "genes": ["CXCL9", "CXCL10", "CXCL11", "IFNG", "STAT1", "STAT2", "IDO1",
+              "HLA-DRA", "HLA-DPA1", "GBP1", "IRF1", "TAP1"]
+  },
+
+  "G6_HEV_lymphoid_stroma": {
+    "label": "高内皮微静脉 / 淋巴组织基质（TLS 结构骨架）",
+    "source": "库内《Tertiary Lymphoid Structures: Diversity in Their Development, Composition, and Role》(J Immunol 2021)",
+    "genes": ["PDPN", "CLDN5", "THY1", "IL7", "TNFSF13B", "CXCL12", "LTBR", "CCL19", "CCL21"]
+  },
+
+  "G7_Tcell_inflamed_cytolytic": {
+    "label": "T 细胞炎症 / 细胞毒程序（阳性对照：应可重复分层预后）",
+    "source": "通用免疫炎症签名（用于验证分析流程本身有效）",
+    "genes": ["CD8A", "CD8B", "GZMA", "GZMB", "PRF1", "NKG7", "IFNG", "CXCR6", "CCL5", "CXCL9"]
+  },
+
+  "panel_strategy": {
+    "primary": "G3_HNSCC_13chemokine",
+    "comparators": ["G1_Coppola_12chemokine", "G2_11chemokine_HCC"],
+    "consensus_inputs": ["G1_Coppola_12chemokine", "G2_11chemokine_HCC", "G3_HNSCC_13chemokine",
+                          "G4_TLS_maturation_GC", "G6_HEV_lymphoid_stroma"],
+    "caveat": "G5 用于分层归因，G7 用作阳性对照；两者不进入共识评分的候选池，以避免把泛免疫炎症等同于 TLS"
+  }
+}

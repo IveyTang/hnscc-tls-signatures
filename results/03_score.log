@@ -1,0 +1,7 @@
+[info] 表达矩阵: 1291 基因 × 563 样本
+[info] 原发肿瘤样本: 517
+2026-10-16 07:54:34,993 [WARNING] Input data contains NA, filled NA with 0
+[info] ssGSEA 完成
+[ok] CTS 与临床交集: 438 例
+[ok] 最优切点 CTS=0.2540 (log-rank χ²=5.67)；中位数=0.5002
+    最优切点分组: {'High': 343, 'Low': 95}

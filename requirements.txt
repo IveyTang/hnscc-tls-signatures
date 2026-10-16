@@ -1,0 +1,35 @@
+# Python dependencies for hnscc-tls-signatures
+#
+# Two flavours are provided:
+#   requirements.txt       - minimum-version constraints (most portable)
+#   requirements-pinned.txt - exact versions used for the published analysis
+#
+# Python >= 3.10 is required (the pipeline uses modern typing and f-strings).
+
+# Core data handling
+pandas>=2.0
+numpy>=1.26
+openpyxl>=3.1
+
+# Statistics and survival analysis
+scipy>=1.11
+statsmodels>=0.14
+lifelines>=0.27
+scikit-learn>=1.4
+
+# Gene set scoring
+gseapy>=1.1
+
+# Plotting
+matplotlib>=3.8
+seaborn>=0.13
+
+# Data acquisition
+requests>=2.31
+
+# PDF parsing (subclause-level p16/HPV extraction from pathology reports)
+pypdf>=4.0
+
+# Optional: external validation on microarray cohorts (step 05)
+# scikit-survival>=0.22
+# mygene>=3.2

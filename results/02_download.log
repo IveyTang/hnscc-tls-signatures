@@ -1,0 +1,17 @@
+[info] 文件 566 个；显式基因 86 个 + 免疫命名模式；并发 10
+  [50/566] 0.7 min, est.total 8.0 min, 失败 0
+  [100/566] 1.4 min, est.total 7.7 min, 失败 0
+  [150/566] 1.9 min, est.total 7.3 min, 失败 0
+  [200/566] 2.5 min, est.total 7.1 min, 失败 1
+  [250/566] 3.4 min, est.total 7.6 min, 失败 1
+  [300/566] 4.3 min, est.total 8.1 min, 失败 1
+  [350/566] 5.1 min, est.total 8.3 min, 失败 1
+  [400/566] 5.9 min, est.total 8.3 min, 失败 1
+  [450/566] 6.5 min, est.total 8.2 min, 失败 1
+  [500/566] 7.2 min, est.total 8.1 min, 失败 1
+  [550/566] 8.1 min, est.total 8.4 min, 失败 3
+  [566/566] 8.3 min, est.total 8.3 min, 失败 3
+[info] 解析表达值 ...
+
+[ok] 矩阵 1291 基因 × 563 样本 -> C:\Users\tangx\WorkBuddy\2026-10-16-07-19-36\tls4_project\data\processed\hnsc_gene_matrix.csv
+[ok] 失败 3 个

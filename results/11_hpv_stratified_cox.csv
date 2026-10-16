@@ -1,0 +1,8 @@
+﻿model,n,events,HR,CI_low,CI_high,p
+"CTS (continuous), HPV-positive (predicted)",68,19,0.553,0.095,3.206,0.5091079892126779
+"CTS (continuous), HPV-negative (predicted)",370,199,0.792,0.467,1.343,0.38655078515794405
+"CTS (continuous), Oropharynx",56,21,0.164,0.029,0.912,0.03891526237123322
+"CTS (continuous), Non-oropharynx",382,197,0.762,0.447,1.3,0.3186198313512997
+Multivariable CTS (without HPV),438,218,0.66,0.399,1.093,0.10651865991961586
+Multivariable CTS (with HPV),438,218,0.739,0.444,1.23,0.24439320021480201
+Multivariable HPV-positive (predicted),438,218,0.49,0.307,0.781,0.0027250372720517137

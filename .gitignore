@@ -1,0 +1,39 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Data downloaded at runtime (regenerable; see docs/reproducibility.md)
+data/raw/
+data/processed/
+data/downloads/
+
+# Large intermediate matrices
+*.h5ad
+*.h5
+*.loom
+*.rds
+*.RData
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Office lock files
+~$*
+
+# Logs and local scratch
+*.tmp
+scratch/

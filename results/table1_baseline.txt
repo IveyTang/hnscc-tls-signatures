@@ -1,0 +1,23 @@
+n = 438
+age  median(IQR): 61.0 (53.0-69.0)
+sex: {'male': 315, 'female': 123}
+subsite: {'口腔': 276, '喉': 99, '口咽': 56, '下咽': 7}
+stage: {'IVA': 241, 'III': 81, 'II': 79, 'I': 23, 'IVB': 11, 'IVC': 3}
+T: {'T4a': 136, 'T2': 130, 'T3': 94, 'T1': 39, 'TX': 26, 'T4': 10, 'T4b': 3}
+N: {'N0': 161, 'N2b': 92, 'NX': 60, 'N1': 55, 'N2c': 42, 'N2a': 11, 'N2': 10, 'N3': 7}
+grade: {'G2': 258, 'G3': 108, 'G1': 57, 'GX': 12, 'G4': 1}
+smoking: {'Current Smoker': 118, 'Current Reformed Smoker for < or = 15 yrs': 86, 'Lifelong Non-Smoker': 85, 'Current Reformed Smoker for > 15 yrs': 52, 'Not Reported': 8, 'Current Reformed Smoker, Duration Not Specified': 1}
+events: 218 (49.8%)
+median follow-up (months, censored): 29.4
+
+CTS: median 0.5002, IQR 0.2865-0.7187, range 0.0085-0.9737
+
+gender: p=1   {'High': {'female': 97, 'male': 248}, 'Low': {'female': 26, 'male': 67}}
+subsite: p=0.05365   {'High': {'下咽': 4, '口咽': 51, '口腔': 212, '喉': 78}, 'Low': {'下咽': 3, '口咽': 5, '口腔': 64, '喉': 21}}
+stage: p=0.1802   {'High': {'I': 21, 'II': 65, 'III': 60, 'IVA': 189, 'IVB': 9, 'IVC': 1}, 'Low': {'I': 2, 'II': 14, 'III': 21, 'IVA': 52, 'IVB': 2, 'IVC': 2}}
+t_stage: p=0.0211   {'High': {'T1': 37, 'T2': 108, 'T3': 70, 'T4': 10, 'T4a': 99, 'T4b': 2, 'TX': 19}, 'Low': {'T1': 2, 'T2': 22, 'T3': 24, 'T4': 0, 'T4a': 37, 'T4b': 1, 'TX': 7}}
+n_stage: p=0.7498   {'High': {'N0': 124, 'N1': 44, 'N2': 8, 'N2a': 10, 'N2b': 72, 'N2c': 35, 'N3': 7, 'NX': 45}, 'Low': {'N0': 37, 'N1': 11, 'N2': 2, 'N2a': 1, 'N2b': 20, 'N2c': 7, 'N3': 0, 'NX': 15}}
+tumor_grade: p=0.09508   {'High': {'G1': 40, 'G2': 199, 'G3': 93, 'G4': 1, 'GX': 11}, 'Low': {'G1': 17, 'G2': 59, 'G3': 15, 'G4': 0, 'GX': 1}}
+smoking_status: p=0.9506   {'High': {'Current Reformed Smoker for < or = 15 yrs': 66, 'Current Reformed Smoker for > 15 yrs': 42, 'Current Reformed Smoker, Duration Not Specified': 1, 'Current Smoker': 95, 'Lifelong Non-Smoker': 65, 'Not Reported': 6}, 'Low': {'Current Reformed Smoker for < or = 15 yrs': 20, 'Current Reformed Smoker for > 15 yrs': 10, 'Current Reformed Smoker, Duration Not Specified': 0, 'Current Smoker': 23, 'Lifelong Non-Smoker': 20, 'Not Reported': 2}}
+
+age: High median 61.0 vs Low 61.0, Mann-Whitney p=0.3938

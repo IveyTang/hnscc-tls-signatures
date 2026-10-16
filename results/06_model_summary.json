@@ -1,0 +1,99 @@
+{
+ "n_model": 438,
+ "cox_multivariable": [
+  {
+   "var": "CTS",
+   "HR": 0.6795,
+   "p": 0.1183
+  },
+  {
+   "var": "age",
+   "HR": 1.0148,
+   "p": 0.0174
+  },
+  {
+   "var": "male",
+   "HR": 0.8603,
+   "p": 0.3008
+  },
+  {
+   "var": "stage_iv",
+   "HR": 1.8178,
+   "p": 0.0
+  }
+ ],
+ "top_marker_correlations": [
+  {
+   "marker": "检查点",
+   "spearman_rho": 0.8983,
+   "p": 8.898313297905697e-158
+  },
+  {
+   "marker": "Treg",
+   "spearman_rho": 0.8886,
+   "p": 1.0313796794017265e-149
+  },
+  {
+   "marker": "Tfh",
+   "spearman_rho": 0.8273,
+   "p": 2.8442660143238784e-111
+  },
+  {
+   "marker": "CD8 T",
+   "spearman_rho": 0.8173,
+   "p": 1.8592347930748616e-106
+  },
+  {
+   "marker": "IFN-γ 程序",
+   "spearman_rho": 0.7558,
+   "p": 3.468349792236038e-82
+  }
+ ],
+ "top_negative_correlations": [
+  {
+   "marker": "生发中心 B",
+   "spearman_rho": 0.4617,
+   "p": 1.6541342583814996e-24
+  },
+  {
+   "marker": "CAF",
+   "spearman_rho": 0.3222,
+   "p": 4.8656327442376225e-12
+  },
+  {
+   "marker": "上皮/肿瘤",
+   "spearman_rho": -0.1413,
+   "p": 0.003033665144069292
+  }
+ ],
+ "nomogram_points": [
+  {
+   "var": "CTS",
+   "beta": -0.386,
+   "HR": 0.679,
+   "points_per_unit": 64.665,
+   "p": 0.118
+  },
+  {
+   "var": "age",
+   "beta": 0.015,
+   "HR": 1.015,
+   "points_per_unit": 2.466,
+   "p": 0.017
+  },
+  {
+   "var": "male",
+   "beta": -0.15,
+   "HR": 0.86,
+   "points_per_unit": 25.17,
+   "p": 0.301
+  },
+  {
+   "var": "stage_iv",
+   "beta": 0.598,
+   "HR": 1.818,
+   "points_per_unit": 100.0,
+   "p": 0.0
+  }
+ ]
+}

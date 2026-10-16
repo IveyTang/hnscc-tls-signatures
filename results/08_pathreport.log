@@ -1,0 +1,10 @@
+[info] 病理报告 530 份
+   ... 100/530
+   ... 200/530
+   ... 300/530
+   ... 400/530
+   ... 500/530
+
+[ok] 处理 530 份；PDF 解析失败 0；下载失败 0
+     文本判定分布: {'(未判定)': 490, 'Negative': 24, 'Positive': 16}
+     输出 -> C:\Users\tangx\WorkBuddy\2026-10-16-07-19-36\tls4_project\data\raw\tcga_hnsc_path_report_hpv.csv

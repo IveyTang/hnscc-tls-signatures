@@ -1,0 +1,20 @@
+# Normalise line endings so the repository is byte-identical across platforms.
+# Text files are stored with LF in the repository and checked out with LF
+# everywhere, which keeps the committed CSV outputs stable when the pipeline
+# is re-run on Windows and then compared with `git status` on Linux (or vice versa).
+* text=auto eol=lf
+
+# Data files must never be transformed - the committed tables are byte-compared
+*.csv  -text
+*.tsv  -text
+*.json -text
+*.npy  binary
+
+# Binary assets
+*.png  binary
+*.tif  binary
+*.tiff binary
+*.pdf  binary
+*.xlsx binary
+*.docx binary
+*.zip  binary
