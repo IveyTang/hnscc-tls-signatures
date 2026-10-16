@@ -9,9 +9,9 @@ Only one route is needed — but whichever you use, the metadata is already prep
 
 ---
 
-## Before you start: two placeholders to replace
+## Before you start: two checks
 
-1. In `CITATION.cff`, replace `REPLACE_WITH_GITHUB_USERNAME` (two occurrences) with the GitHub account or organisation that will host the repository.
+1. ~~Replace `REPLACE_WITH_GITHUB_USERNAME` in `CITATION.cff`.~~ **Done** — the repository is hosted at `https://github.com/IveyTang/hnscc-tls-signatures`, and both `repository-code` and `url` already point there.
 2. Confirm the creator list and affiliations in both `.zenodo.json` and `zenodo/metadata.json`. ORCIDs for the second and third authors should be added if available.
 
 ---
