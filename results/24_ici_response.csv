@@ -1,0 +1,17 @@
+﻿score,endpoint,odds_ratio_per_sd,p,auc
+G1_Coppola_12chemokine,DCR,1.5587,0.04255,0.6266
+G4_TLS_maturation_GC,DCR,1.5371,0.04487,0.6176
+CTS,DCR,1.5238,0.04785,0.6248
+G2_11chemokine_HCC,DCR,1.5237,0.05192,0.6184
+G3_HNSCC_13chemokine,DCR,1.4932,0.06243,0.6143
+G7_Tcell_inflamed_cytolytic,DCR,1.4566,0.0833,0.6262
+G5_Th1_IFNgamma,DCR,1.3014,0.21358,0.588
+G6_HEV_lymphoid_stroma,DCR,1.2624,0.26128,0.5748
+G5_Th1_IFNgamma,ORR,4.2709,0.00265,0.8062
+G3_HNSCC_13chemokine,ORR,3.0486,0.00589,0.7592
+G2_11chemokine_HCC,ORR,3.1219,0.00648,0.7602
+G1_Coppola_12chemokine,ORR,3.1312,0.00689,0.7582
+G7_Tcell_inflamed_cytolytic,ORR,2.7051,0.01055,0.7672
+CTS,ORR,2.52,0.01662,0.7438
+G4_TLS_maturation_GC,ORR,1.8533,0.04835,0.6803
+G6_HEV_lymphoid_stroma,ORR,1.5829,0.15571,0.6414

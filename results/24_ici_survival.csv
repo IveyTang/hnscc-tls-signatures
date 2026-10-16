@@ -1,0 +1,7 @@
+﻿endpoint,score,n,events,hr_per_sd,p,chi2
+PFS,CTS,102,96,0.7354,0.002,
+PFS,G7_Tcell_inflamed_cytolytic,102,96,0.7354,0.00266,
+PFS,CTS (discovery cut-off),102,96,,0.08134,3.038
+OS,CTS,102,92,0.7401,0.00534,
+OS,G7_Tcell_inflamed_cytolytic,102,92,0.6859,0.00106,
+OS,CTS (discovery cut-off),102,92,,0.00436,8.126

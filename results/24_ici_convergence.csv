@@ -1,0 +1,7 @@
+﻿set_a,set_b,spearman_rho
+G1_Coppola_12chemokine,G2_11chemokine_HCC,0.9933
+G1_Coppola_12chemokine,G3_HNSCC_13chemokine,0.9902
+G2_11chemokine_HCC,G3_HNSCC_13chemokine,0.991
+G1_Coppola_12chemokine,G7_Tcell_inflamed_cytolytic,0.8809
+G2_11chemokine_HCC,G7_Tcell_inflamed_cytolytic,0.8831
+G3_HNSCC_13chemokine,G7_Tcell_inflamed_cytolytic,0.8805

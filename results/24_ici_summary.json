@@ -1,0 +1,287 @@
+{
+  "cohort": "GSE159067 (advanced HNSCC on PD-1/PD-L1 inhibitors)",
+  "n": 102,
+  "geneset_coverage": {
+    "G1_Coppola_12chemokine": "12/12",
+    "G2_11chemokine_HCC": "11/11",
+    "G3_HNSCC_13chemokine": "12/13",
+    "G4_TLS_maturation_GC": "9/14",
+    "G5_Th1_IFNgamma": "10/12",
+    "G6_HEV_lymphoid_stroma": "8/9",
+    "G7_Tcell_inflamed_cytolytic": "8/10"
+  },
+  "n_panel_genes": 2559,
+  "discovery_cutoff": 0.2489,
+  "convergence": {
+    "chemokine_pairs_min_rho": 0.9902,
+    "chemokine_pairs_max_rho": 0.9933,
+    "chemokine_vs_Tcell_rho": [
+      0.8809,
+      0.8831,
+      0.8805
+    ]
+  },
+  "programme_correlation": [
+    {
+      "programme": "Treg",
+      "spearman_rho_with_CTS": 0.894
+    },
+    {
+      "programme": "Tfh",
+      "spearman_rho_with_CTS": 0.8825
+    },
+    {
+      "programme": "Checkpoint",
+      "spearman_rho_with_CTS": 0.8794
+    },
+    {
+      "programme": "CD8 T cells",
+      "spearman_rho_with_CTS": 0.792
+    },
+    {
+      "programme": "B cells",
+      "spearman_rho_with_CTS": 0.7739
+    },
+    {
+      "programme": "IFN-gamma",
+      "spearman_rho_with_CTS": 0.7195
+    },
+    {
+      "programme": "GC B cells",
+      "spearman_rho_with_CTS": 0.6198
+    },
+    {
+      "programme": "Endothelium/HEV",
+      "spearman_rho_with_CTS": 0.5291
+    },
+    {
+      "programme": "Macrophages",
+      "spearman_rho_with_CTS": 0.4346
+    },
+    {
+      "programme": "Plasma cells",
+      "spearman_rho_with_CTS": 0.3199
+    },
+    {
+      "programme": "CAF",
+      "spearman_rho_with_CTS": 0.2614
+    },
+    {
+      "programme": "Epithelial",
+      "spearman_rho_with_CTS": -0.1201
+    }
+  ],
+  "hot_phenotype": {
+    "n_with_score": 102,
+    "spearman_rho_CTS_vs_hot_phenotype": 0.7373,
+    "auc_CTS_for_HOT_call": 0.8739,
+    "auc_Tcell_inflamed_for_HOT_call": 0.9377
+  },
+  "response": {
+    "n": 102,
+    "orr": 11,
+    "dcr": 38,
+    "details": [
+      {
+        "score": "CTS",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.5238,
+        "p": 0.04785,
+        "auc": 0.6248
+      },
+      {
+        "score": "G7_Tcell_inflamed_cytolytic",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.4566,
+        "p": 0.0833,
+        "auc": 0.6262
+      },
+      {
+        "score": "G7_Tcell_inflamed_cytolytic",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 2.7051,
+        "p": 0.01055,
+        "auc": 0.7672
+      },
+      {
+        "score": "CTS",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 2.52,
+        "p": 0.01662,
+        "auc": 0.7438
+      }
+    ],
+    "all": [
+      {
+        "score": "CTS",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 2.52,
+        "p": 0.01662,
+        "auc": 0.7438
+      },
+      {
+        "score": "CTS",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.5238,
+        "p": 0.04785,
+        "auc": 0.6248
+      },
+      {
+        "score": "G1_Coppola_12chemokine",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 3.1312,
+        "p": 0.00689,
+        "auc": 0.7582
+      },
+      {
+        "score": "G1_Coppola_12chemokine",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.5587,
+        "p": 0.04255,
+        "auc": 0.6266
+      },
+      {
+        "score": "G2_11chemokine_HCC",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 3.1219,
+        "p": 0.00648,
+        "auc": 0.7602
+      },
+      {
+        "score": "G2_11chemokine_HCC",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.5237,
+        "p": 0.05192,
+        "auc": 0.6184
+      },
+      {
+        "score": "G3_HNSCC_13chemokine",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 3.0486,
+        "p": 0.00589,
+        "auc": 0.7592
+      },
+      {
+        "score": "G3_HNSCC_13chemokine",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.4932,
+        "p": 0.06243,
+        "auc": 0.6143
+      },
+      {
+        "score": "G4_TLS_maturation_GC",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 1.8533,
+        "p": 0.04835,
+        "auc": 0.6803
+      },
+      {
+        "score": "G4_TLS_maturation_GC",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.5371,
+        "p": 0.04487,
+        "auc": 0.6176
+      },
+      {
+        "score": "G5_Th1_IFNgamma",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 4.2709,
+        "p": 0.00265,
+        "auc": 0.8062
+      },
+      {
+        "score": "G5_Th1_IFNgamma",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.3014,
+        "p": 0.21358,
+        "auc": 0.588
+      },
+      {
+        "score": "G6_HEV_lymphoid_stroma",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 1.5829,
+        "p": 0.15571,
+        "auc": 0.6414
+      },
+      {
+        "score": "G6_HEV_lymphoid_stroma",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.2624,
+        "p": 0.26128,
+        "auc": 0.5748
+      },
+      {
+        "score": "G7_Tcell_inflamed_cytolytic",
+        "endpoint": "ORR",
+        "odds_ratio_per_sd": 2.7051,
+        "p": 0.01055,
+        "auc": 0.7672
+      },
+      {
+        "score": "G7_Tcell_inflamed_cytolytic",
+        "endpoint": "DCR",
+        "odds_ratio_per_sd": 1.4566,
+        "p": 0.0833,
+        "auc": 0.6262
+      }
+    ]
+  },
+  "survival": [
+    {
+      "endpoint": "PFS",
+      "score": "CTS",
+      "n": 102,
+      "events": 96,
+      "hr_per_sd": 0.7354,
+      "p": 0.002
+    },
+    {
+      "endpoint": "PFS",
+      "score": "G7_Tcell_inflamed_cytolytic",
+      "n": 102,
+      "events": 96,
+      "hr_per_sd": 0.7354,
+      "p": 0.00266
+    },
+    {
+      "endpoint": "PFS",
+      "score": "CTS (discovery cut-off)",
+      "n": 102,
+      "events": 96,
+      "chi2": 3.038,
+      "p": 0.08134
+    },
+    {
+      "endpoint": "OS",
+      "score": "CTS",
+      "n": 102,
+      "events": 92,
+      "hr_per_sd": 0.7401,
+      "p": 0.00534
+    },
+    {
+      "endpoint": "OS",
+      "score": "G7_Tcell_inflamed_cytolytic",
+      "n": 102,
+      "events": 92,
+      "hr_per_sd": 0.6859,
+      "p": 0.00106
+    },
+    {
+      "endpoint": "OS",
+      "score": "CTS (discovery cut-off)",
+      "n": 102,
+      "events": 92,
+      "chi2": 8.126,
+      "p": 0.00436
+    }
+  ],
+  "hpv": {
+    "n_neg": 49,
+    "n_pos": 11,
+    "median_cts_neg": 0.4118,
+    "median_cts_pos": 0.6157,
+    "p": 0.21078793865460954
+  },
+  "figure": true
+}

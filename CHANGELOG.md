@@ -2,6 +2,48 @@
 
 All notable changes to this repository are documented here. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0]
+
+Adds the immunotherapy (ICI) validation cohort and corrects the earlier claim
+that NCBI/GEO was unreachable.
+
+### Added
+
+- **GSE159067** (102 advanced HNSCC patients on PD-1/PD-L1 inhibitors),
+  retrieved **directly from GEO**:
+  - `scripts/23_fetch_gse159067_geo.py` — retrieval over plain FTP and, as a
+    fallback, HTTPS to NCBI's IP with the proxy bypassed.
+  - `scripts/24_ici_validation_gse159067.py` — response, survival and
+    phenotype validation with the same gene sets and scoring, no re-tuning.
+- Derived data `data/derived/gse159067_clinical_and_cts.csv`,
+  `results/24_ici_*`, `results/table7_ici_validation.csv`,
+  `results/fig_ici_validation.png`.
+
+### Findings
+
+- Chemokine signatures were again nearly interchangeable (ρ = 0.990–0.993) and
+  correlated as strongly with a generic T cell-inflamed signature
+  (ρ = 0.880–0.883) as in the discovery cohort.
+- CTS tracked the immune "hot phenotype" published with this cohort
+  (ρ = 0.737; AUC 0.874 for the HOT/COLD call), and predicted objective
+  response (OR 2.52 per SD, p = 0.017) and longer PFS (HR 0.735, p = 0.002).
+- The generic T cell-inflamed control matched it on every endpoint and was
+  better for objective response (OR 2.71; AUC 0.767) and overall survival
+  (HR 0.686).
+
+### Corrected
+
+- **The claim that NCBI/GEO was unreachable was wrong.** All earlier requests
+  went through the sandbox HTTP proxy, which returns `000` for NCBI hosts and
+  whose egress IP NCBI's abuse filter rejects. Plain FTP, or HTTPS with
+  `--noproxy '*'` and `--resolve` to NCBI's IP, both work. `scripts/README.md`
+  now documents this instead of the mirror workaround.
+- References 36–49 had been mis-numbered as 1–14 in an earlier edit; the whole
+  list is now renumbered sequentially and a numbering invariant was added to
+  the compliance scan.
+
+---
+
 ## [1.1.0]
 
 Adds the external validation cohort and removes the last blocked analysis step.

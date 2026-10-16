@@ -1,0 +1,16 @@
+﻿Item,Value
+Cohort,GSE159067 - advanced HNSCC on PD-1/PD-L1 inhibitors
+Patients,102
+Panel,"HTG EdgeSeq Oncology Biomarker Panel (2,567 genes)"
+Gene set coverage,G1 12/12; G2 11/11; G3 12/13; G4 9/14; G5 10/12; G6 8/9; G7 8/10
+"Chemokine pairs, rho (min-max)",0.990-0.993
+"Chemokine vs T cell-inflamed, rho",0.880-0.883
+"CTS vs published hot phenotype, rho",0.737
+CTS AUC for published HOT call,0.874
+Objective response rate,11/102 (10.8%)
+Disease control rate,38/102 (37.3%)
+"CTS, ORR (OR per SD)",2.52 (p = 0.017)
+"CTS, DCR (OR per SD)",1.52 (p = 0.048)
+"CTS, PFS (HR per SD)",0.735 (p = 0.002)
+"CTS, OS (HR per SD)",0.740 (p = 0.005)
+"Median CTS, HPV+ vs HPV-",0.616 vs 0.412 (p = 0.2108)
