@@ -4,7 +4,8 @@
 ----------------------------------
 External validation of the consensus TLS score (CTS) in **GSE65858**
 (Wichmann/Rosolowski et al.), retrieved from the EBI ArrayExpress mirror as
-`E-GEOD-65858` because NCBI GEO is unreachable from this environment.
+`E-GEOD-65858`, which supplies both the series and the array-design annotation
+from a single host.
 
 Design
 ~~~~~~

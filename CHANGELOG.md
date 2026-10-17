@@ -2,6 +2,49 @@
 
 All notable changes to this repository are documented here. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0]
+
+Adds the cut-off stability analysis, the cross-platform validation of the
+transcriptomic HPV classifier, and the supplementary reporting materials.
+
+### Added
+
+- **Cut-off stability** (`scripts/03b_cutpoint_stability.py`): 1,000 bootstrap
+  resamples in which the *entire* cut-off selection procedure is repeated
+  (60 candidate thresholds, minimum 15 patients per group). Reproducibility is
+  also assessed *without* re-selection, by applying the discovery cut-off
+  unchanged to each resample, because a scan over many thresholds will nearly
+  always locate some nominally significant cut-off. Outputs
+  `results/03b_cutpoint_stability.csv` (per-resample) and `.json` (summary).
+  The vectorised log-rank implementation reproduces the discovery point
+  estimate exactly (cut-off 0.248926, χ² 5.721466).
+- **Cross-platform validation of the HPV classifier**
+  (`scripts/25_hpv_classifier_external.py`): the eight genes and coefficients
+  selected under nested leave-one-out in TCGA-HNSC are transplanted *without
+  re-fitting* into GSE65858, where HPV16 status was resolved independently at
+  both the DNA and the viral E6\*I RNA level. Because ROC-AUC is invariant to
+  the intercept (which was not recorded in the discovery analysis), the
+  comparison is exact; sensitivity and specificity are re-derived within the
+  external cohort at Youden thresholds and labelled as such. Outputs
+  `results/25_hpv_classifier_external.csv` / `.json` and
+  `results/fig_hpv_classifier_external.png`.
+- **Supplementary Figure S1** (`scripts/26_supp_figure_hpv_roc.py`): the
+  three-panel ROC figure (primary DNA+RNA+ versus DNA−; any HPV16 DNA+
+  versus DNA−; oropharynx only), each with the transplanted classifier, the
+  unweighted panel mean and CDKN2A alone. Output
+  `results/fig_supp_hpv_roc.png`.
+- **`docs/supplementary.md`**: the manuscript's supplementary material — the
+  20-item REMARK reporting checklist mapped item by item to the manuscript,
+  the bootstrap cut-off distribution, and the Supplementary Figure S1 legend.
+
+### Changed
+
+- `docs/reproducibility.md`: corrected the statement that NCBI/GEO was
+  unreachable. That claim was an artefact of routing all requests through an
+  HTTP proxy that returns HTTP 000 for NCBI hosts; GEO is reachable over plain
+  FTP or over HTTPS with the proxy bypassed. Added a Path C covering the
+  cut-off stability and HPV cross-platform analyses.
+
 ## [1.2.0]
 
 Adds the immunotherapy (ICI) validation cohort and corrects the earlier claim

@@ -18,6 +18,7 @@ Scripts are numbered in execution order. Each reads from `data/` and writes to `
 | Script | Purpose | Key outputs |
 |---|---|---|
 | `03_build_tls_score.py` | Score seven gene sets under three algorithms; build the consensus TLS score; signature convergence matrix | `03_score_summary.json`, `signature_convergence.csv`, `hnsc_tls_scores.csv` |
+| `03b_cutpoint_stability.py` | 1,000 bootstrap resamples in which the whole cut-off selection is repeated, plus reproducibility *without* re-selection at the fixed and median cut-offs | `03b_cutpoint_stability.csv/json` |
 | `04_internal_validation.py` | Kaplan–Meier, log-rank, univariable and multivariable Cox, time-dependent AUC, C-index | `04_*.csv/json`, `fig_km_cts.png`, `fig_forest_multivariate.png`, `fig_roc_timedependent.png`, `fig_signature_convergence.png` |
 | `05_external_validation.py` | Generic external-validation harness for a local cohort with a sample annotation file | — |
 | `06_microenvironment_nomogram.py` | Marker-based microenvironmental programmes, nomogram, calibration, decision curve analysis | `06_*.csv/json`, `fig_nomogram.png`, `fig_calibration.png`, `fig_dca.png`, `fig_microenv_correlation.png` |
@@ -28,6 +29,10 @@ Scripts are numbered in execution order. Each reads from `data/` and writes to `
 | `20b_fetch_adf_ranged.py` | Download the 71.7 MB Illumina HT-12 v4 array design with parallel HTTP Range requests and verify its exact length | `A-GEOD-10558.adf.txt` |
 | `21_external_validation_gse65858.py` | External validation: identical gene sets and scoring, no re-tuning; convergence, programme correlation, survival, HPV association, published-cluster check | `21_ext_*.csv/json`, `fig_ext_*.png` |
 | `22_ext_figure_panel.py` | Compose the four external-validation panels into the manuscript figure and build the summary table | `fig_ext_validation.png`, `table6_external_validation.csv` |
+| `23_fetch_gse159067_geo.py` | Fetch the immunotherapy cohort (GSE159067, 2020 submission) **directly from GEO** over FTP, with an HTTPS-to-IP proxy-bypass fallback | `data/external/GSE159067/**`, `fetch_log.json` |
+| `24_ici_validation_gse159067.py` | Immunotherapy validation: objective response, progression-free and overall survival, and correlation with the cohort's published hot phenotype | `24_ici_*.csv/json`, `table7_ici_validation.csv`, `fig_ici_validation.png` |
+| `25_hpv_classifier_external.py` | Transplant the eight-gene HPV classifier into GSE65858 **without re-fitting**; ROC-AUC for transcriptionally active infection, any DNA positivity, and the oropharyngeal subset, against CDKN2A and an unweighted panel mean | `25_hpv_classifier_external.csv/json`, `fig_hpv_classifier_external.png` |
+| `26_supp_figure_hpv_roc.py` | Build Supplementary Figure S1: the three-panel ROC figure for the transplanted classifier | `fig_supp_hpv_roc.png` |
 
 ## Utility
 

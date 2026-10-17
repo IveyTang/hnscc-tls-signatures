@@ -1,0 +1,98 @@
+{
+  "cohort": "GSE65858 (Illumina HumanHT-12 v4)",
+  "n_with_expression_and_hpv": 270,
+  "label_distribution": {
+    "DNA-": 196,
+    "DNA+RNA+": 35,
+    "NA": 20,
+    "DNA+RNA-": 19
+  },
+  "model_genes": [
+    "CDKN2C",
+    "RPA2",
+    "LIG1",
+    "MCM5",
+    "ASF1B",
+    "E2F2",
+    "E2F1",
+    "PCNA"
+  ],
+  "coefficients": {
+    "CDKN2C": 1.007749032797077,
+    "RPA2": 0.5813400985328828,
+    "LIG1": 0.31259755607585166,
+    "MCM5": 0.8624285785625746,
+    "ASF1B": -0.02448891265222008,
+    "E2F2": 1.197426851872714,
+    "E2F1": 0.8441012059436124,
+    "PCNA": 0.6754773919907614
+  },
+  "discovery_loo_auc": 0.99,
+  "standardisation": "per-gene z-score within GSE65858 samples",
+  "intercept_note": "the discovery intercept was not recorded; ROC-AUC is invariant to additive constants, so discrimination is comparable, whereas sensitivity/specificity at a fixed operating point are not and are re-derived here",
+  "primary_dnaRnaPos_vs_dnaNeg": {
+    "comparison": "primary_dnaRnaPos_vs_dnaNeg",
+    "n": 231,
+    "n_pos": 35,
+    "n_neg": 196,
+    "score": "linear_predictor_8genes",
+    "auc": 0.921,
+    "auc_lo": 0.8716,
+    "auc_hi": 0.9662,
+    "sens_at_youden": 0.9143,
+    "spec_at_youden": 0.8061,
+    "n_boot_valid": 2000
+  },
+  "secondary_anyDnaPos_vs_dnaNeg": {
+    "comparison": "secondary_anyDnaPos_vs_dnaNeg",
+    "n": 250,
+    "n_pos": 54,
+    "n_neg": 196,
+    "score": "linear_predictor_8genes",
+    "auc": 0.7811,
+    "auc_lo": 0.7001,
+    "auc_hi": 0.8556,
+    "sens_at_youden": 0.7222,
+    "spec_at_youden": 0.7755,
+    "n_boot_valid": 2000
+  },
+  "primary_oropharynx_only": {
+    "comparison": "primary_oropharynx_only",
+    "n": 75,
+    "n_pos": 28,
+    "n_neg": 47,
+    "score": "linear_predictor_8genes",
+    "auc": 0.9141,
+    "auc_lo": 0.8387,
+    "auc_hi": 0.9717,
+    "sens_at_youden": 0.8571,
+    "spec_at_youden": 0.8511,
+    "n_boot_valid": 2000
+  },
+  "baseline_CDKN2A_alone": {
+    "comparison": "primary_dnaRnaPos_vs_dnaNeg",
+    "n": 231,
+    "n_pos": 35,
+    "n_neg": 196,
+    "score": "CDKN2A_alone",
+    "auc": 0.8943,
+    "auc_lo": 0.8464,
+    "auc_hi": 0.9369,
+    "sens_at_youden": 0.8571,
+    "spec_at_youden": 0.8112,
+    "n_boot_valid": 2000
+  },
+  "baseline_unweighted_mean": {
+    "comparison": "primary_dnaRnaPos_vs_dnaNeg",
+    "n": 231,
+    "n_pos": 35,
+    "n_neg": 196,
+    "score": "unweighted_mean_8genes",
+    "auc": 0.9233,
+    "auc_lo": 0.8662,
+    "auc_hi": 0.972,
+    "sens_at_youden": 0.8571,
+    "spec_at_youden": 0.8878,
+    "n_boot_valid": 2000
+  }
+}

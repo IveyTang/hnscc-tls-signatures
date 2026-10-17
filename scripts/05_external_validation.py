@@ -1,21 +1,26 @@
 # -*- coding: utf-8 -*-
 """
-选题四 / Step 4 —— 外部验证（GEO 队列）
+Generic external-validation harness (superseded by scripts 21 and 24).
 
-⚠️ 前置条件（本机 GEO 不可达，需人工下载后放入 data/raw/geo/）：
-    GSE65858/  GSE65858_series_matrix.txt.gz  +  GPL*（平台注释）
-    GSE159067/ GSE159067_series_matrix.txt.gz +  GPL*
+Prerequisites — place the downloaded series in data/raw/geo/:
+    GSE65858/  GSE65858_series_matrix.txt.gz  +  GPL* platform annotation
+    GSE159067/ GSE159067_series_matrix.txt.gz +  GPL* platform annotation
 
-用法：
+GEO is reachable (plain FTP, or HTTPS to NCBI's IP with the proxy bypassed;
+see scripts/README.md). In the final analysis this harness was superseded by
+the dedicated scripts 21 (GSE65858) and 24 (GSE159067), which are the ones
+that produce the reported results.
+
+Usage:
     python scripts/05_external_validation.py --dataset GSE65858
     python scripts/05_external_validation.py --dataset GSE159067 --ici
 
-设计要点（对应方案约束 C4）：
-    * 跨平台一致性依赖**秩/相对评分**，绝不直接比较原始表达值
-    * 外部队列**不重新调参**，cutpoint 沿用 TCGA 训练集
-    * 报告 HR / C-index / 校准表现
+Design note: cross-platform comparability relies on rank/relative scoring
+only; raw expression values are never compared directly. The external cohort
+is never re-tuned, and the discovery cut-off is carried across unchanged.
+Hazard ratios, the concordance index and calibration are reported.
 
-输出：
+Outputs:
     results/05_external_<dataset>.json
     results/fig_external_<dataset>.png
 """
@@ -142,11 +147,13 @@ def main():
     ds_dir = os.path.join(RAW, args.dataset)
     if not os.path.isdir(ds_dir):
         print("=" * 72)
-        print("[阻塞] 未找到 %s" % ds_dir)
-        print("本机 GEO（NCBI）不可达（实测 HTTP 000）。请在其他联网环境下载：")
+        print("[blocked] cohort directory not found: %s" % ds_dir)
+        print("Place the series matrix and the platform annotation file there.")
+        print("GEO is reachable: use plain FTP, or HTTPS to NCBI's IP with the")
+        print("proxy bypassed (see scripts/README.md for the exact pattern).")
         print("  1. %s_series_matrix.txt.gz" % args.dataset)
-        print("  2. 平台注释文件（GPL*_family.soft.gz 或 GPL*.annot.gz）")
-        print("放入：%s" % ds_dir)
+        print("  2. platform annotation (GPL*_family.soft.gz or GPL*.annot.gz)")
+        print("Expected location: %s" % ds_dir)
         print("=" * 72)
         sys.exit(2)
 

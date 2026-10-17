@@ -42,8 +42,9 @@ scripts/
   01_build_clinical_table.py Build cohort with the three-way primary-tumour filter
   02_download_expression.py  Download STAR-Counts files and extract TPM values
   03_build_tls_score.py      Score seven gene sets by three algorithms; build CTS
+  03b_cutpoint_stability.py  Bootstrap the cut-off selection (1,000 resamples)
   04_internal_validation.py  Kaplan-Meier, Cox, time-dependent AUC, C-index, convergence
-  05_external_validation.py  External validation (GSE65858 / GSE159067) - see note below
+  05_external_validation.py  Generic external-validation harness (superseded by 21 / 24)
   06_microenvironment_nomogram.py  Marker programmes, nomogram, calibration, DCA
   07_fetch_bcr_hpv.py        Parse HPV fields from BCR clinical XML
   08_fetch_path_reports.py   Retrieve diagnostic pathology report PDFs
@@ -51,6 +52,14 @@ scripts/
   09_extract_hpv_panel.py    Extract the 107-gene HPV host-expression panel
   10_hpv_status.py           Three-source HPV labelling + nested LOO classifier
   11_hpv_stratified.py       HPV-stratified survival analysis and interaction testing
+  20_fetch_gse65858_ebi.py   Fetch GSE65858 from the EBI ArrayExpress mirror
+  20b_fetch_adf_ranged.py    Parallel-range download of the HT-12 v4 array design
+  21_external_validation_gse65858.py  Prognostic + phenotypic validation, no re-tuning
+  22_ext_figure_panel.py     Compose the external-validation figure and summary table
+  23_fetch_gse159067_geo.py  Fetch the immunotherapy cohort directly from GEO
+  24_ici_validation_gse159067.py  Response, survival and phenotype validation
+  25_hpv_classifier_external.py   Transplant the HPV classifier into GSE65858
+  26_supp_figure_hpv_roc.py  Build Supplementary Figure S1 (three-panel ROC)
   exploratory/               Ad-hoc GDC field-discovery probes (not part of the pipeline)
 data/
   expr_download_meta.json    Provenance for the expression download
@@ -64,6 +73,7 @@ docs/
   analysis_plan.md           Pre-specified analysis plan
   data_dictionary.md         Column-by-column data dictionary
   reproducibility.md         How to reproduce from scratch, including runtime
+  supplementary.md           REMARK checklist, bootstrap cut-off table, Figure S1 legend
 zenodo/
   metadata.json              Deposit metadata for Zenodo
   DEPOSIT_GUIDE.md           Step-by-step archiving instructions

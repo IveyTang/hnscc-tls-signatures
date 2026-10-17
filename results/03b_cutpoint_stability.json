@@ -1,0 +1,49 @@
+{
+  "n": 438,
+  "n_deaths": 218,
+  "n_bootstrap_requested": 1000,
+  "n_bootstrap_valid": 1000,
+  "n_bootstrap_degenerate": 0,
+  "seed": 20261016,
+  "n_candidates": 60,
+  "candidate_percentile_range": [
+    10.0,
+    90.0
+  ],
+  "min_per_group": 15,
+  "within_tolerance": 0.05,
+  "point_cut": 0.248926,
+  "point_chi2": 5.721466,
+  "point_p": 0.016758728342615267,
+  "point_terzile": 0,
+  "terzile_boundaries": [
+    0.354094,
+    0.639458
+  ],
+  "cut_median": 0.403477,
+  "cut_iqr": [
+    0.248648,
+    0.692133
+  ],
+  "cut_range": [
+    0.089439,
+    0.860193
+  ],
+  "frac_within_0.05_of_point": 0.376,
+  "frac_same_terzile": 0.481,
+  "frac_significant_p05": 0.872,
+  "frac_sig_and_same_terzile": 0.425,
+  "p_median": 0.0035,
+  "p_q25": 0.0005,
+  "p_q75": 0.0216,
+  "median_cut": 0.500193,
+  "fixed_cut_used": 0.248926,
+  "fixed_cut_sig_rate_p05": 0.638,
+  "fixed_cut_p_median": 0.0168,
+  "fixed_cut_p_iqr": [
+    0.0019,
+    0.1106
+  ],
+  "median_cut_sig_rate_p05": 0.145,
+  "median_cut_p_median": 0.3122
+}

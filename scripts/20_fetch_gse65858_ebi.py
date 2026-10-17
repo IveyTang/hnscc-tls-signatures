@@ -7,11 +7,10 @@ mirror** instead of NCBI GEO.
 
 Rationale
 ~~~~~~~~~
-NCBI (www.ncbi.nlm.nih.gov / ftp.ncbi.nlm.nih.gov) is unreachable from this
-environment, and the agent egress IP is additionally blocked by NCBI with a
-"possible misuse" page. ArrayExpress imported GEO series up to ~2017, so
-GSE65858 is available in full as **E-GEOD-65858**, hosted on the EBI FTP
-mirror:
+ArrayExpress imported GEO series up to ~2017, so GSE65858 is available in full
+as **E-GEOD-65858**, hosted on the EBI FTP mirror. It is used here because the
+mirror supplies the series and the platform annotation from a single host with
+no proxy complications. Endpoints:
 
     record   https://www.ebi.ac.uk/biostudies/api/v1/studies/E-GEOD-65858
     files    https://ftp.ebi.ac.uk/biostudies/fire/E-GEOD-/858/E-GEOD-65858/Files/
