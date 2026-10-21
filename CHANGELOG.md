@@ -2,6 +2,47 @@
 
 All notable changes to this repository are documented here. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0]
+
+Analysis release accompanying the pre-submission audit of the manuscript. Adds one
+multivariable model used throughout, a clinical-only comparator for the decision
+curve analysis, bootstrap intervals for discrimination, and English versions of
+Figures 1-8.
+
+### Added
+
+- `scripts/30_unified_models.py` — refits the HPV-adjusted estimate on the same
+  covariates as the primary multivariable model (age, sex, stage dummy-coded,
+  subsite, smoking status; ridge 0.1), adds a clinical-only model to the decision
+  curve analysis, and bootstraps the C-index and 36-month AUC differences
+  (1,000 resamples). Outputs `results/30_*`.
+- `scripts/31_figures_english.py` — redraws Figures 1-8 with English labels at
+  300 dpi. The previously deposited figures carried Chinese axis labels and
+  in-figure titles, which are not usable in an English-language submission.
+  Outputs to `results/fig_en/`.
+
+### Changed
+
+- **HPV-adjusted hazard ratio.** The manuscript now reports one multivariable
+  model. Adding HPV status to that model moves the consensus score HR from 0.757
+  to 0.810 (95% CI 0.495-1.325); HPV positivity is independently protective
+  (HR 0.511, 95% CI 0.335-0.779). The earlier 0.660/0.739 pair came from a
+  parsimonious model (age, sex, stage IV) reported under the same label.
+- **Decision curve analysis.** A clinical-only curve has been added. Net benefit
+  for the combined and clinical-only models is essentially identical (0.225 vs
+  0.221, thresholds 0.10-0.65; the combined model is higher at 47% of
+  thresholds), which supports the paper's conclusion rather than the earlier
+  reading of the figure.
+- **Discrimination.** Reported with bootstrap intervals (dC-index -0.010, 95% CI
+  -0.034 to 0.014; dAUC at 36 months -0.013, 95% CI -0.050 to 0.018) and
+  described as indistinguishable rather than inferior.
+- **GSE65858 probe accounting.** Corrected to the measured values: 47,231 probes
+  in the array design, 43,961 with a gene symbol, 31,330 present in the sample
+  tables, 22,000 genes after collapsing.
+- `README.md` finding 5 now reports the unified-model estimate.
+- `docs/reproducibility.md` records the model change and the DCA/bootstrap
+  additions as cross-checks.
+
 ## [1.3.1]
 
 Metadata release accompanying a change of target journal. No analysis, result

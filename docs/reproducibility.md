@@ -93,6 +93,9 @@ Cross-checks performed between implementations:
 - Time-dependent AUC uses a cumulative/dynamic definition; scores are negated to define a risk score, with 0.5 as the null value.
 - The multivariable Cox model is fitted with a ridge penalty of 0.1 and zero-variance covariates are removed before fitting. Unpenalised refits produced equivalent conclusions.
 - The HPV classifier was trained with feature selection inside each cross-validation fold specifically to test for and exclude information leakage.
+- The HPV-adjusted and HPV-unadjusted hazard ratios for the consensus score come from the *same* covariate set (age, sex, stage dummy-coded, subsite, smoking status; ridge 0.1), so that the change in the estimate reflects the addition of HPV status and nothing else (`scripts/30_unified_models.py`). An earlier draft reported the HPV-adjusted estimate from a parsimonious model (age, sex, stage IV; penalizer 0.01) under the same label; the two models gave HR 0.660 and 0.757 respectively, and only the latter is used now.
+- Decision curve analysis compares four strategies, including a clinical-only model, because the incremental value of a marker can only be read against the model it is added to. Net benefit for the combined and clinical-only models is essentially identical (0.225 vs 0.221 across thresholds 0.10–0.65).
+- Differences in discrimination between the consensus score and the generic T cell-inflamed signature are reported with 1,000-resample bootstrap intervals rather than as point-estimate rankings (`results/30_bootstrap_discrimination.csv`).
 
 ## Known limitations on reproducibility
 

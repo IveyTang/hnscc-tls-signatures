@@ -1,0 +1,18 @@
+{
+ "n": 438,
+ "band": [
+  0.1,
+  0.65
+ ],
+ "mean_nb_combined": 0.2245,
+ "mean_nb_clinical_only": 0.2214,
+ "mean_nb_cts_only": 0.105,
+ "mean_delta_combined_minus_clinical": 0.0032,
+ "delta_range": [
+  -0.018,
+  0.0304
+ ],
+ "frac_thresholds_combined_above_clinical": 0.473,
+ "cox_combined_CTS_p": 0.1183,
+ "cox_combined_stageIV_HR": 1.818
+}

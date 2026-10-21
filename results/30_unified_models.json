@@ -1,0 +1,108 @@
+{
+ "main_model_04": {
+  "n": 438,
+  "events": 218,
+  "covariates": [
+   "CTS",
+   "age",
+   "male",
+   "stage_c_II",
+   "stage_c_III",
+   "stage_c_IVA",
+   "stage_c_IVB",
+   "stage_c_IVC",
+   "subsite_c_口咽",
+   "subsite_c_口腔",
+   "subsite_c_喉",
+   "smoke_c_Current Reformed Smoker for > 15 yrs",
+   "smoke_c_Current Reformed Smoker, Duration Not Specified",
+   "smoke_c_Current Smoker",
+   "smoke_c_Lifelong Non-Smoker",
+   "smoke_c_Not Reported",
+   "smoke_c_Unknown"
+  ],
+  "penalizer": 0.1,
+  "CTS": {
+   "HR": 0.757,
+   "CI_low": 0.463,
+   "CI_high": 1.238,
+   "p": 0.26786449141517954
+  }
+ },
+ "main_model_plus_hpv": {
+  "n": 438,
+  "events": 218,
+  "penalizer": 0.1,
+  "CTS": {
+   "HR": 0.81,
+   "CI_low": 0.495,
+   "CI_high": 1.325,
+   "p": 0.4013080877217312
+  },
+  "HPV_positive": {
+   "HR": 0.511,
+   "CI_low": 0.335,
+   "CI_high": 0.779,
+   "p": 0.0018268264661593988
+  }
+ },
+ "parsimonious_11": {
+  "n": 438,
+  "penalizer": 0.01,
+  "CTS_without_hpv": {
+   "HR": 0.66,
+   "CI_low": 0.399,
+   "CI_high": 1.093,
+   "p": 0.10651865991961586
+  },
+  "CTS_with_hpv": {
+   "HR": 0.739,
+   "CI_low": 0.444,
+   "CI_high": 1.23,
+   "p": 0.24439320021480201
+  }
+ },
+ "dca": {
+  "n": 438,
+  "band": [
+   0.1,
+   0.65
+  ],
+  "mean_nb_combined": 0.2245,
+  "mean_nb_clinical_only": 0.2214,
+  "mean_nb_cts_only": 0.105,
+  "mean_delta_combined_minus_clinical": 0.0032,
+  "delta_min": -0.018,
+  "delta_max": 0.0304,
+  "frac_thresholds_combined_above_clinical": 0.473,
+  "cox_combined_CTS": {
+   "HR": 0.679,
+   "CI_low": 0.418,
+   "CI_high": 1.104,
+   "p": 0.11834911051366594
+  },
+  "cox_clinical_stage_iv": {
+   "HR": 1.825,
+   "CI_low": 1.392,
+   "CI_high": 2.392,
+   "p": 1.3234643201331047e-05
+  }
+ },
+ "discrimination": {
+  "n": 438,
+  "cindex_CTS": 0.5361,
+  "cindex_G7": 0.5458,
+  "cindex_diff_CI": [
+   -0.034,
+   0.0138
+  ],
+  "cindex_diff_p_two_sided": 0.438,
+  "auc36_CTS": 0.5728,
+  "auc36_G7": 0.5862,
+  "auc36_diff_CI": [
+   -0.0497,
+   0.0178
+  ],
+  "auc36_diff_p_two_sided": 0.462
+ }
+}

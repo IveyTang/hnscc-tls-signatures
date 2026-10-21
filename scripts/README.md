@@ -100,6 +100,8 @@ python scripts/23_fetch_gse159067_geo.py       # series matrix + log2 CPM matrix
 python scripts/21_external_validation_gse65858.py
 python scripts/24_ici_validation_gse159067.py
 python scripts/22_ext_figure_panel.py
+python scripts/30_unified_models.py           # one multivariable model, clinical-only DCA, bootstrap CI
+python scripts/31_figures_english.py          # Figures 1-8 redrawn in English, 300 dpi
 ```
 
 Two practical notes that cost time to discover:
