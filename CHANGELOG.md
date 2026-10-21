@@ -2,6 +2,36 @@
 
 All notable changes to this repository are documented here. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.1]
+
+Metadata release accompanying a change of target journal. No analysis, result
+table or figure changes; the archived 1.3.0 files are unchanged.
+
+### Changed
+
+- **Manuscript title.** The manuscript is retitled "Chemokine-based tertiary
+  lymphoid structure signatures in head and neck cancer are redundant with
+  generic inflammation and do not replicate prognostically". The previous title
+  claimed only that the signatures are not interchangeable with one another;
+  the study also shows that they are redundant with a generic inflammation
+  signature and that the prognostic association does not replicate in an
+  external cohort. The new title states both. Updated in `README.md`,
+  `CITATION.cff`, `.zenodo.json`, `zenodo/metadata.json` and
+  `docs/supplementary.md`. The title recorded for the 1.3.0 deposition on Zenodo
+  is historical and is **not** altered.
+- **Target journal.** The manuscript is submitted to *Frontiers in Immunology*
+  (section Cancer Immunity and Immunotherapy) rather than to *Journal of
+  Translational Medicine*, following three desk rejections of related work on
+  novelty/scope grounds. No content change follows from this.
+
+### Added
+
+- `docs/analysis_plan.md` now carries an explicit record of one deviation from
+  the frozen plan: the cut-off stability analysis was pre-specified with 200
+  bootstrap resamples and was run with 1,000. The pre-specified text is left
+  verbatim and the deviation is noted beneath it. The manuscript discloses the
+  same deviation in the Methods.
+
 ## [1.3.0]
 
 Adds the cut-off stability analysis, the cross-platform validation of the

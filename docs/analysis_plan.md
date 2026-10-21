@@ -63,6 +63,8 @@ The optimal cut-off maximises the log-rank statistic over candidate thresholds b
 
 Stability was assessed by 200 bootstrap resamples with a fixed seed (20261016). The median cut-off and its bootstrap distribution are reported as sensitivity analyses. **The cut-off is not proposed as a validated clinical threshold.**
 
+> **Deviation, recorded after the fact.** This plan specified 200 resamples. The implemented analysis (`scripts/03b_cutpoint_stability.py`) uses **1,000**, so that the 10th and 90th percentiles of the selected threshold could be estimated with useful precision. No other element of the procedure was changed, and the text above is left exactly as pre-specified; this note is the record of the deviation. The vectorised log-rank implementation reproduces the discovery-cohort point estimate exactly (cut-off 0.248926, χ² 5.721466). The manuscript states the deviation and its reason in the Methods.
+
 ## Statistical analysis
 
 - Kaplan–Meier estimation with the log-rank test.

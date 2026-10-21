@@ -1,8 +1,8 @@
 # hnscc-tls-signatures
 
-**Tertiary lymphoid structure gene signatures are not interchangeable in head and neck squamous cell carcinoma: a retrospective multi-signature transcriptomic analysis**
+**Chemokine-based tertiary lymphoid structure signatures in head and neck cancer are redundant with generic inflammation and do not replicate prognostically**
 
-This repository contains the complete, reproducible analysis pipeline, derived data, and result tables and figures for the manuscript above, submitted to *Journal of Translational Medicine*.
+This repository contains the complete, reproducible analysis pipeline, derived data, and result tables and figures for the manuscript above, submitted to *Frontiers in Immunology*.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23415040.svg)](https://doi.org/10.5281/zenodo.23415040)
 
@@ -150,17 +150,16 @@ A third note concerns HPV annotation: direct labels exist for only 84 of 438 pat
 If you use this code or data, please cite the manuscript and the archived release:
 
 ```
-Tang X, Zhang Y, He Y, et al. Tertiary lymphoid structure gene signatures are not
-interchangeable in head and neck squamous cell carcinoma: a retrospective
-multi-signature transcriptomic analysis. Journal of Translational Medicine. (in submission)
+Tang X, Zhang Y, He Y, et al. Chemokine-based tertiary lymphoid structure signatures
+in head and neck cancer are redundant with generic inflammation and do not replicate
+prognostically. Frontiers in Immunology. (in submission)
 ```
 
 The repository is citable at https://github.com/IveyTang/hnscc-tls-signatures, and release 1.0.0 is archived at https://doi.org/10.5281/zenodo.23415040 (concept DOI). See `CITATION.cff` for machine-readable metadata.
 
 ```
 Tang X, Zhang Y, He Y. hnscc-tls-signatures: analysis code and derived data for
-"Tertiary lymphoid structure gene signatures are not interchangeable in head and
-neck squamous cell carcinoma" (v1.0.0). Zenodo. 2026.
+"Chemokine-based tertiary lymphoid structure signatures in head and neck cancer are redundant with generic inflammation and do not replicate prognostically" (v1.0.0). Zenodo. 2026.
 https://doi.org/10.5281/zenodo.23415040
 ```
 
